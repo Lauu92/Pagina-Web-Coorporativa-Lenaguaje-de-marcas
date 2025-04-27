@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Atkinson";
+    background-color: aquamarine;
+}
+
+
+#contenedor{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+}
+
+#contenedor > section {
+    flex: 3; /* El section ocupa más espacio */
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  #contenedor > aside {
+    flex: 1; /* El aside ocupa menos espacio */
+    background-color: #d0d0d0;
+    padding: 20px;
+  }
+  
+  #contenedor > header,
+  #contenedor > nav {
+    width: 100%; /* El header y nav ocupan toda la fila arriba */
+    background-color: #c0c0c0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footerFinal {
+    background-color: red;
+  }
+
