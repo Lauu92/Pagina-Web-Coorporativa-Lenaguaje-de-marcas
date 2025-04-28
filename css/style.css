@@ -4,8 +4,13 @@
     box-sizing: border-box;
     font-family: "Atkinson";
     background-color: aquamarine;
+    font-family: "roboto";
 }
 
+@font-face {
+  font-family: "roboto";
+  src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
 
 #contenedor{
     display: flex;
@@ -35,4 +40,25 @@
   .footerFinal {
     background-color: red;
   }
+
+  .menuGeneral {
+    list-style: none;
+    background-color: black;
+  }
+
+  .menuGeneral > li > a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+  }
+
+  .menuGeneral li {
+    display: inline-block;
+    font-size: 35px;
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+  }
+
+
 
