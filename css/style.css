@@ -7,6 +7,18 @@
     font-family: "roboto";
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 @font-face {
   font-family: "roboto";
   src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
@@ -15,6 +27,7 @@
 #contenedor{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    flex:1;
 }
 
 #contenedor>header{
@@ -38,6 +51,8 @@
     padding: 20px;
     text-align: center;
   }
+
+ 
 
 
   /*Barra de menú*/
@@ -73,8 +88,8 @@
   }
 
 
-  .menuGeneral> li> a:hover {
-    transform: scale(1.1);  /*Al pasar por encima, se agrandan las opciones del menú*/
+  .menuGeneral li a:not(.seccionactiva):hover {
+    transform: scale(1.1);
   }
 
   .menuGeneral > li.logo {
@@ -92,11 +107,16 @@
     display: block;
   }
 
+  .menuGeneral li a.seccionactiva {
+    color: green;
+  }
+
    /*nav presentación*/
   .homePresentacion> h1 {
     font-size: 80px;
     padding: 4rem;
     margin-top: 2rem;
+    color: #2f6b3a;
   }
 
   .homePresentacion> p{
@@ -104,14 +124,67 @@
     margin-bottom: 3rem;
   }
 
-
-  /*Fooer copyright*/
-
-  .footerFinal>p {
-    background-color: white;
+  /*Footer modificado*/
+  .footerFinal {
+    background-color: black !important;
+    color: #fff;
+    padding: 0.5em;
+  }
+  
+  .footerFinal p {
+    background-color: black !important;
+    color: #fff;
     text-align: center;
+    margin: 0.5em;
   }
-
-  .logo > img{
-
+  
+  /*Añadida una parte con enlaces legales en el footer*/
+  .footer-links {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0.5em;
   }
+  
+  .footer-links a {
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5em;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /*Otra sección, con iconos de enlace a
+  las posibles redes sociales de la empresa*/
+  .footer-redes {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-redes ion-icon {
+    background-color: black;
+  }
+  
+  .footer-redes a {
+    color: #2f6b3a;
+    /* Verde matcha / botella */
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    background-color: black;
+  }
+  
+  .footer-redes a:hover {
+    color: #cccccc;
+    /* Gris claro al pasar el ratón */
+    transform: scale(1.2);
+  }
+  

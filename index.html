@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energía Renovable</title>
     <link rel="stylesheet" href="css/style.css">
+    
+     <!--Libreria iconos web https://ionic.io -->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -12,7 +16,8 @@
         <header>
             <ul class="menuGeneral">
                 <li class="logo"><img src="img/logo2.png" alt="logo"></li>
-                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="index.html" class="seccionactiva">Inicio</a></li>
+                <li><a href="quienessomos.html">Quiénes somos</a></li>
                 <li><a href="AreaActuacion.html">Áreas de actuación</a></li>
                 <li><a href="#">Noticias</a></li>
                 <li><a href="#">Publicaciones</a></li>
@@ -46,8 +51,24 @@
         </aside>
     </div>
 
-    <footer class="footerFinal">
+
+    <!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
+     de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
+     <footer class="footerFinal">
         <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
+        <div class="footer-links">
+            <p>© 2025 Eléctrica Random</p>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
     </footer>
     
 </body>
