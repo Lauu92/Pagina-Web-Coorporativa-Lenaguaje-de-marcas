@@ -1,0 +1,424 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Atkinson";
+  background-color: white;
+  font-family: "roboto";
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
+
+#contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenedor header {
+  background-color: black;
+}
+
+#contenedor>section {
+  flex: 3;
+  /* El section ocupa más espacio */
+  padding: 20px;
+}
+
+#contenedor>aside {
+  flex: 1;
+  /* El aside ocupa menos espacio */
+  padding: 20px;
+}
+
+#contenedor>header,
+#contenedor>nav {
+  width: 100%;
+  /* El header y nav ocupan toda la fila arriba */
+  padding: 20px;
+  text-align: center;
+}
+
+/*Barra de menú*/
+.menuGeneral {
+  list-style: none;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: black;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+.menuGeneral>li>a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menuGeneral li {
+  font-size: 25px;
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+}
+
+/*INCORPORO AQUÍ EL ESTILO PARA LA ZONA DEL MENÚ DONDE ESTÁ EL USUARIO*/
+.menuGeneral li a:not(.seccionactiva):hover {
+  transform: scale(1.1);
+}
+
+.menuGeneral>li.logo {
+  position: absolute;
+  left: 1rem;
+  padding: 0;
+}
+
+.menuGeneral>li.logo img {
+  height: 6rem;
+  display: block;
+  object-fit: contain;
+  background-color: black;
+  /* Asegura que el fondo sea negro como el menú */
+  display: block;
+}
+
+.menuGeneral li a.seccionactiva {
+  color: green;
+}
+
+/*nav presentación*/
+.homePresentacion>h1 {
+  font-size: 80px;
+  padding: 4rem;
+  margin-top: 2rem;
+}
+
+.homePresentacion>p {
+  font-size: 35px;
+  margin-bottom: 3rem;
+}
+
+.textopresent {
+  display: flex;
+}
+
+
+/*Fooer copyright*/
+
+.footerFinal>p {
+  background-color: white;
+  text-align: center;
+}
+
+/*SECCION ESPECÍFICA DE HTML QUIENES SOMOS*/
+/* Banner de bienvenida con imagen*/
+/*Ambos contenedores ocupan todo el ancho de la página
+y además si algo se desborda quedaría oculto.*/
+.bannerquienessomos,
+.textopresentquienes {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*Aquí aseguro que la imagen ocupe el ancho (aunque debería hacerlo
+con lo de arriba) y que encaje en el contenedor sin verse demasiado
+grande*/
+.bannerquienessomos img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/*El texto de presentación se muestra debajo, con un ancho razonable
+y cómodo para la vista y tamaño de texto que escala con el campo de
+visión*/
+.textopresentquienes {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*Nombre de la empresa, lo he puesto en mayúsuclas y verde para
+que destaque*/
+.textopresentquienes .titulo {
+  font-size: 3rem;
+  color: #2f6b3a;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/*Formato para el elogan que va debajo del nombre de la empresa*/
+.textopresentquienes .subtitulo {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/*Formato de los párrafos, con margen a los lados y un ancho
+para que se vean apaisados y más estéticos, texto justificado.*/
+.textopresentquienes .historia {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de recuadros de misión, visión y valores,
+va en gris suave para resaltar sobre el fondo del sitio web,
+centra los recuadros */
+.mvv {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+
+/*formato para los tres recuadros, con texto justificado, borde
+y sombra para que se vea bien*/
+.recuadrmvv {
+  flex: 1;
+  margin: 1em;
+  text-align: justify;
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid lightgray;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Titulos en color verde, centrados*/
+.mvv .recuadrmvv h2 {
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: green;
+}
+
+/*Lista de valores, sin viñetas y centrados
+en el cuadro*/
+.recuadrmvv ul {
+  list-style: none;
+  justify-self: center;
+}
+
+/*Formato de cada elemento de la lista desordenada
+texto centrado*/
+.recuadrmvv ul li {
+  display: flex;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+/*Iconos de la librería para los valores,
+con flex-shrink para que no encojan al extrechar
+el navegador*/
+.recuadrmvv ul li ion-icon {
+  font-size: 1.5rem;
+  color: green;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+
+/* SECCIÓN DE PILARES DEL SERVICIO CON FLIPCARDS */
+
+/*Formato del contenedor de todas, las centra y 
+las alinea, cuando el navegador se estrecha deben 
+quedar apiladas en vertical.*/
+.flipcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/*Formato de cada una, con una anchura y altura
+para que quede estético*/
+.flipcard {
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 250px;
+  perspective: 1000px;
+  margin: 1rem;
+}
+
+/*Formato del tamaño de los iconos de cada pilar de servicio*/
+.icono-flip {
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 1rem;
+}
+
+/*Reverso de cada una, gira*/
+.flip-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s;
+  /*con esto hace que haya anverso y reverso
+  correctamente, sino muestra solo el anverso dado
+  la vuelta*/
+  transform-style: preserve-3d;
+  min-height: 240px;
+}
+
+/*Activacion de la rotación al pasar el cursor*/
+.flipcard:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/*Formato para que el anverso y el reverso
+tengan el mismo aspecto, anchura y comportamiento*/
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Formato solo para el anveros, para
+centrar el texto y el contenido en vertical y horizontal*/
+.flip-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*Formato para el tamaño de los iconos*/
+.flip-front ion-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+/*Formato para el reverso, para centrar el texto
+y que se vea bien, como si fuera negrita y
+justificado*/
+.flip-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: justify;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+/*Formato para resaltar algunas palabras de los textos del
+reverso de las flipcards*/
+.flip-back span {
+  font-weight: bold;
+  color: #2f6b3a;
+}
+
+/* SECCIÓN DE FOOTER - MODIFICADO A PARTIR DEL BASE*/
+.footerFinal {
+  background-color: black !important;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.footerFinal p {
+  background-color: black !important;
+  color: #fff;
+  text-align: center;
+  margin: 0.5em;
+}
+
+/*Añadida una parte con enlaces legales en el footer*/
+.footer-links {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.footer-links a {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/*Otra sección, con iconos de enlace a
+las posibles redes sociales de la empresa*/
+.footer-redes {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-redes ion-icon {
+  background-color: black;
+}
+
+.footer-redes a {
+  color: #2f6b3a;
+  /* Verde matcha / botella */
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: black;
+}
+
+.footer-redes a:hover {
+  color: #cccccc;
+  /* Gris claro al pasar el ratón */
+  transform: scale(1.2);
+}
+
+/*SECCIÓN RESPONSIVE - en progreso*/
+@media screen and (max-width: 768px) {
+  .flipcards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textopresentquienes {
+    width: 90%;
+  }
+
+  .historia {
+    width: 100%;
+  }
+}
