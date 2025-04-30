@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Libreria iconos web https://ionic.io -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>ER - Quienes somos</title>
+    <link rel="stylesheet" href="css/styleQuienes.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <ul class="menuGeneral">
+                <li class="logo"><img src="img/logo2.png" alt="logo"></li>
+                <li><a href="index.html">Inicio</a></li>
+                <!-- Incorporo un estilo que marca en coor verde la sección en la que etá el usuario,
+                 igual sobra-->
+                <li><a href="#" class="seccionactiva">Quiénes somos</a></li>
+                <li><a href="AreaActuacion.html">Áreas de actuación</a></li>
+                <li><a href="index.html">Noticias</a></li>
+                <li><a href="index.html">Publicaciones</a></li>
+                <li><a href="#">Localización</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+
+        <!-- Banner con img de ienvenida -->
+        <div class="bannerquienessomos">
+            <img src="img/bannerquienes.jpg" alt="Banner de bienvenida">
+        </div>
+
+        <!-- Presentación empresa  con nombre, eslógan y algo de texto,
+         como pide el enunciado-->
+        <div class="textopresentquienes">
+            <h2 class="titulo">Eléctrica Random</h2>
+            <p class="subtitulo">Soluciones innovadoras para un futuro renovable</p>
+            <p class="historia">
+                Nuestra empreza comenzó su andadura como un comercio de instalaciones eléctricas de barrio,
+                ofreciendo equipamiento y servicios básicos para viviendas y empresas.
+                Con el paso de los años, y la llegada de una nueva generación,
+                Eléctrica Random amplió sus horizontes para enfocarse en la distribución e instalación de
+                equipamiento de energías renovables, adaptándose a las nuevas necesidades del mercado
+                y comprometida con la sostenibilidad.
+            </p>
+            <p class="historia">
+                Hoy en día, Eléctrica Random se posiciona como un referente en soluciones energéticas,
+                llevando a cabo proyectos innovadores con un enfoque responsable y sostenible,
+                que ayuda a sus clientes a incorporar las energías renovables en sus hogares y empresas.
+            </p>
+            <p class="historia">
+                Ofrecemos soluciones integrales, desde la valoración de las necesidades del cliente hasta el
+                diseño personalizado de la instalación, su ejecución y el servicio postventa. Además,
+                nos encargamos de gestionar posibles subvenciones relevantes, facilitando el acceso a
+                beneficios económicos para nuestros clientes y garantizando la mejor relación calidad-precio
+                en cada proyecto.
+            </p>
+        </div>
+
+        <!-- Misión, Visión, Valores: una sección habitual en los about me de las empresas, queda vistoso-->
+        <div class="mvv">
+
+            <div class="recuadrmvv">
+                <h2>Misión</h2>
+                <p>La misión de Eléctrica Random es Impulsar la transición energética
+                    hacia un futuro sostenible, mediante la instalación y gestión de
+                    soluciones de energías renovables adaptadas a hogares, empresas y
+                    organismos públicos. Apostamos por la innovación tecnológica como
+                    motor para maximizar la eficiencia energética, proteger el medio
+                    ambiente y fomentar un modelo energético limpio, accesible y
+                    responsable.</p>
+            </div>
+
+            <div class="recuadrmvv">
+                <h2>Visión</h2>
+                <p>Ser una empresa líder en la integración de energías renovables,
+                    reconocida por su compromiso con el desarrollo sostenible, la
+                    excelencia tecnológica y la transformación del entorno hacia
+                    un sistema energético más justo, ecológico e inteligente.
+                    Aspiramos a contribuir activamente en la preservación del planeta,
+                    haciendo de cada proyecto una oportunidad para generar impacto positivo.</p>
+            </div>
+
+            <div class="recuadrmvv">
+                <h2>Valores</h2>
+                <ul>
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon> <strong>Sostenibilidad</strong>
+                    </li>
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon> <strong>Innovación y excelencia</strong>
+                    </li>
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon> <strong>Responsabilidad social</strong>
+                    </li>
+                    <li>
+                        <ion-icon name="checkmark-circle-outline"></ion-icon> <strong>Transparencia y confianza</strong>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Flipcards de pilares del servicio -->
+        <!-- Aquí he imitado el estilo de otra web similar, porque me pareció algo muy dinámico-->
+        <div class="flipcards">
+
+            <!-- Flipcard 1 -->
+            <div class="flipcard">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <ion-icon name="shield-checkmark-outline" class="icono-flip"></ion-icon>
+                        <p>Calidad de materiales</p>
+                    </div>
+                    <div class="flip-back">
+                        <p>Trabajamos solo con <span>materiales certificados</span> de alta eficiencia y
+                            durabilidad, garantizando <span>instalaciones seguras y de larga vida útil</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flipcard 2 -->
+            <div class="flipcard">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <ion-icon name="time-outline" class="icono-flip"></ion-icon>
+                        <p>Plazos garantizados</p>
+                    </div>
+                    <div class="flip-back">
+                        <p>Cumplimos rigurosamente los tiempos de ejecución acordados,
+                            asegurando que cada proyecto se entregue <span>sin demoras ni imprevistos</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flipcard 3 -->
+            <div class="flipcard">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <ion-icon name="construct-outline" class="icono-flip"></ion-icon>
+                        <p>Asesoría de instalación</p>
+                    </div>
+                    <div class="flip-back">
+                        <p>Ofrecemos un <span>acompañamiento completo</span> desde el inicio, ayudando a nuestros
+                            clientes a elegir la solución energética que mejor se adapta a sus necesidades.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flipcard 4 -->
+            <div class="flipcard">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <ion-icon name="cash-outline" class="icono-flip"></ion-icon>
+                        <p>Gestión de subvenciones</p>
+                    </div>
+                    <div class="flip-back">
+                        <p><span>Nos encargamos de tramitar</span> las <span>ayudas y subvenciones</span> disponibles,
+                            facilitando
+                            el acceso a beneficios económicos para cada instalación.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flipcard 5 -->
+            <div class="flipcard">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <ion-icon name="chatbubble-ellipses-outline" class="icono-flip"></ion-icon>
+                        <p>Comunicación constante</p>
+                    </div>
+                    <div class="flip-back">
+                        <p>Mantenemos informado al cliente en todo momento, con <span>atención
+                                personalizada y canales abiertos</span> durante todo el proceso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
+     de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
+    <footer class="footerFinal">
+        <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
+        <div class="footer-links">
+            <p>© 2025 Eléctrica Random</p>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
