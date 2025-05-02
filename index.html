@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Libreria iconos web https://ionic.io -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!--Para el icono del menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Energía Renovable</title>
     <link rel="stylesheet" href="css/style.css">
-    
-     <!--Libreria iconos web https://ionic.io -->
-     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
 </head>
 
 <body>
@@ -16,31 +25,31 @@
         <header>
             <ul class="menuGeneral">
                 <li class="logo"><img src="img/logo2.png" alt="logo"></li>
-                <li><a href="index.html" class="seccionactiva">Inicio</a></li>
-                <li><a href="quienessomos.html">Quiénes somos</a></li>
-                <li><a href="AreaActuacion.html">Áreas de actuación</a></li>
-                <li><a href="#">Noticias</a></li>
-                <li><a href="#">Publicaciones</a></li>
-                <li><a href="#">Localización</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li class="icon"><ion-icon class="hamburguesa-icon" name="menu-outline" size="large"></ion-icon></li>
+                <li><a href="#" class="menu_item seccionactiva">Inicio</a></li>
+                <li><a href="quienessomos.html" class="menu_item">Quiénes somos</a></li>
+                <li><a href="AreaActuacion.html" class="menu_item">Áreas de actuación</a></li>
+                <li><a href="index.html" class="menu_item">Noticias</a></li>
+                <li><a href="index.html" class="menu_item">Publicaciones</a></li>
+                <li><a href="index.html" class="menu_item">Localización</a></li>
+                <li><a href="contacto.html" class="menu_item">Contacto</a></li>
             </ul>
         </header>
 
         <nav class="homePresentacion">
             <h1>Energías renovables</h1>
             <p>La naturaleza y el progreso se dan la mano para aportar un nuevo aliento <br>
-            de vida al planeta gracias al desarrollo de las energías renovables</p>
+                de vida al planeta gracias al desarrollo de las energías renovables</p>
         </nav>
 
         <section>
-            <header>
+            <header class="headerdentosection">
                 Hola soy header 2
             </header>
-    
+
             <article>
                 Hola soy article
             </article>
-    
             <footer>
                 Hola soy footer
             </footer>
@@ -49,12 +58,38 @@
         <aside>
             Hola soy aside
         </aside>
-    </div>
 
+
+        <div class="localizacion">
+            <div class="contenidolocaliz">
+                <div class="mapa">
+                    <img src="img/mapalocali.jpg" alt="Mapa con ubicaciones" />
+                </div>
+                <div class="info-ubicaciones">
+                    <div class="sede">
+                        <p><ion-icon name="home-outline"></ion-icon> Direccion de sede 1 random</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 999 111 111</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> sede.1@elecrandom.com</p>
+                    </div>
+                    <div class="sede">
+                        <p><ion-icon name="home-outline"></ion-icon> Direccion de sede 2 random</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 999 111 112 </p>
+                        <p><ion-icon name="mail-outline"></ion-icon> sede.2@elecrandom.com</p>
+                    </div>
+                    <div class="sede">
+                        <p><ion-icon name="home-outline"></ion-icon>Direccion de sede 3 random</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 999 111 113</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> sede.3@elecrandom.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
      de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
-     <footer class="footerFinal">
+    <footer class="footerFinal">
         <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
         <div class="footer-links">
             <p>© 2025 Eléctrica Random</p>
@@ -70,6 +105,29 @@
             <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
         </div>
     </footer>
-    
+
+
+    <script>
+        // Cuando se haga clic en el icono de la hamburguesa
+        document.querySelector('.hamburguesa-icon').addEventListener('click', function () {
+            // Encuentra el contenedor de los elementos del menú
+            const menuItems = document.querySelectorAll('.menuGeneral > li:not(.logo):not(.icon)');
+
+            // Alterna la visibilidad de los elementos del menú
+            menuItems.forEach(item => {
+                item.style.display = item.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa-icon');
+        const menu = document.querySelector('.menuGeneral');
+
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
 </body>
+
 </html>
