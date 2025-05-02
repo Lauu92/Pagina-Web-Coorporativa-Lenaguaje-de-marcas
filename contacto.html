@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Libreria iconos web https://ionic.io -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!--Para el icono del menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <title>ER - Contacto</title>
+    <link rel="stylesheet" href="css/styleContacto.css">
+
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <ul class="menuGeneral">
+                <li class="logo"><img src="img/logo2.png" alt="logo"></li>
+                <li class="icon"><ion-icon class="hamburguesa-icon" name="menu-outline" size="large"></ion-icon></li>
+                <li><a href="index.html" class="menu_item">Inicio</a></li>
+                <!-- Incorporo un estilo que marca en color verde la sección en la que está el usuario,
+                 igual sobra-->
+                <li><a href="quienessomos.html" class="menu_item">Quiénes somos</a></li>
+                <li><a href="AreaActuacion.html" class="menu_item">Áreas de actuación</a></li>
+                <li><a href="index.html" class="menu_item">Noticias</a></li>
+                <li><a href="index.html" class="menu_item">Publicaciones</a></li>
+                <li><a href="index.html" class="menu_item">Localización</a></li>
+                <li><a href="#" class="menu_item seccionactiva">Contacto</a></li>
+            </ul>
+        </header>
+
+        <!-- Banner con img de ienvenida -->
+        <div class="contenedorformulario">
+            <form id="contacto" class="formulario-contacto" action="" method="post" enctype="multipart/form-data">
+                <h2>CONTACTE CON NOSOTROS PARA SOLICITAR MÁS INFORMACIÓN O UNA CITA</h2>
+                <fieldset>
+                    <!-- Datos personales -->
+                    <legend>Datos de la persona de contacto</legend>
+                    <div class="campomasdeunacosa">
+                        <div class="campoestrecho">
+                            <label for="nombre">Nombre*</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="apellidos">Apellidos*</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="campomasdeunacosa">
+                        <div class="campoestrecho">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="campoestrecho">
+                        <label for="telefono">Tfno. (Opcional)</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+                </fieldset>
+
+                <fieldset>
+                    <!-- Eleccion de producto del que quiere informacion -->
+                    <legend>Datos de la solicitud</legend>
+                    <div class="campo">
+                        <label for="tipo-cliente">Destinatario del servicio*</label>
+                        <select id="tipo-cliente" name="tipo-cliente" required>
+                            <option value="0" disabled selected>Seleccione una opción</option>
+                            <option value="1">Particular</option>
+                            <option value="2">Empresa</option>
+                            <option value="3">Organismo público</option>
+                            <option value="4">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="producto">Producto o servicio*</label>
+                        <select id="producto" name="producto" required>
+                            <option value="0" disabled selected>Seleccione una opción</option>
+                            <option value="1">Placas solares</option>
+                            <option value="2">Equipamiento eólico</option>
+                            <option value="3">Instalación hidroeléctrica</option>
+                            <option value="4">Baterías y almacenamiento</option>
+                            <option value="5">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="solicitud">Tipo de solicitud*</label>
+                        <select id="solicitud" name="solicitud" required>
+                            <option value="0" disabled selected>Seleccione una opción</option>
+                            <option value="1">Visita presencial</option>
+                            <option value="2">Información por correo electrónico</option>
+                            <option value="3">Información por teléfono</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <!-- Datos de dirección del cliente -->
+                    <legend>Dirección de la consulta</legend>
+                    <div class="campomasdeunacosa">
+                        <div class="campoancho">
+                            <label for="calle">Calle*</label>
+                            <input type="text" id="calle" name="calle" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="numero">Número*</label>
+                            <input type="text" id="numero" name="numero" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="piso">Piso</label>
+                            <input type="text" id="piso" name="piso">
+                        </div>
+                    </div>
+
+                    <div class="campomasdeunacosa">
+                        <div class="campoancho">
+                            <label for="localidad">Localidad*</label>
+                            <input type="text" id="localidad" name="localidad" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="cp">Código postal*</label>
+                            <input type="text" id="cp" name="cp" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="provincia">Provincia*</label>
+                            <input type="text" id="provincia" name="provincia" required>
+                        </div>
+                    </div>
+
+                    <div class="campo" id="cupstamanio">
+                        <label for="cups">CUPS*</label>
+                        <input type="text" id="cups" name="cups" required>
+                    </div>
+
+                    <div class="campo">
+                        <span>Tipo de instalación</span>
+                        <div class="camporadio">
+                            <label><input type="radio" name="instalacion" value="desconocido"
+                                    checked>Desconocido</label>
+                            <label><input type="radio" name="instalacion" value="monofasica"> Monofásica</label>
+                            <label><input type="radio" name="instalacion" value="trifasica"> Trifásica</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mensaje</legend>
+                    <!-- Espacio para el mensaje del cliente -->
+                    <div class="campo">
+                        <label for="mensaje">Comentarios</label>
+                        <textarea id="mensaje" name="mensaje" maxlength="900" rows="5"
+                            placeholder="Escriba aquí su mensaje, si procede (máx. 900 caracteres)."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Zona de casillas para que acepte aspectos legales y similar -->
+                <fieldset class="condiciones">
+                    <div class="campo">
+                        <label><input type="checkbox" required>Acepto la Política de privacidad y los Términos de
+                            servicio.*</label>
+                    </div>
+                    <div class="campo">
+                        <label><input type="checkbox" required> Doy mi consentimiento para que me contacten por los
+                            medios que he facilitado.*</label>
+                    </div>
+                    <div class="campo">
+                        <label><input type="checkbox"> Acepto el envío de comunicaciones comerciales e información
+                            relevante de esta empresa.</label>
+                    </div>
+                </fieldset>
+
+
+                <!-- Botones de enviar y borrar la información -->
+                <div class="acciones">
+                    <button type="reset" class="boton borrar">Borrar</button>
+                    <button type="submit" class="boton enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
+     de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
+    <footer class="footerFinal">
+        <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
+        <div class="footer-links">
+            <p>© 2025 Eléctrica Random</p>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+    </footer>
+
+    <script>
+        // Cuando se haga clic en el icono de la hamburguesa
+        document.querySelector('.hamburguesa-icon').addEventListener('click', function () {
+            // Encuentra el contenedor de los elementos del menú
+            const menuItems = document.querySelectorAll('.menuGeneral > li:not(.logo):not(.icon)');
+
+            // Alterna la visibilidad de los elementos del menú
+            menuItems.forEach(item => {
+                item.style.display = item.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa-icon');
+        const menu = document.querySelector('.menuGeneral');
+
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

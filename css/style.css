@@ -1,13 +1,12 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Atkinson";
-    background-color: white;
-    font-family: "roboto";
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Atkinson", "Roboto", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -15,6 +14,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 
@@ -24,167 +24,566 @@ body {
   src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
 }
 
-#contenedor{
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
-    flex:1;
+#contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos bajen si no caben */
+  flex: 1;
 }
 
-#contenedor>header{
+#contenedor>header {
   background-color: black;
 }
 
-#contenedor > section {
-    flex: 3; /* El section ocupa más espacio */
-    padding: 20px;
+#contenedor>section {
+  flex: 3;
+  /* El section ocupa más espacio */
+  padding: 20px;
+}
+
+#contenedor>aside {
+  flex: 1;
+  /* El aside ocupa menos espacio */
+  padding: 20px;
+}
+
+#contenedor>header,
+#contenedor>nav {
+  width: 100%;
+  /* El header y nav ocupan toda la fila arriba */
+
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+/*Barra de menú*/
+.menuGeneral {
+  list-style: none;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  background-color: black;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+.menuGeneral>li>a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  align-items: center;
+  /* Alineación vertical */
+  padding: 0;
+  margin: 0;
+}
+
+.menuGeneral li {
+  font-size: 25px;
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+}
+
+
+.menuGeneral li a:not(.seccionactiva):hover {
+  transform: scale(1.1);
+}
+
+.menuGeneral>li.logo {
+  position: absolute;
+  left: 1rem;
+  /* Logo alineado a la izquierda */
+  padding: 0;
+
+}
+
+.menuGeneral>li.logo img {
+  height: 6rem;
+  display: block;
+  object-fit: contain;
+  background-color: black;
+  /* Asegura que el fondo sea negro como el menú */
+  display: block;
+}
+
+.menuGeneral li a.seccionactiva {
+  color: green;
+}
+
+.hamburguesa-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/*nav presentación*/
+.homePresentacion>h1 {
+  font-size: 80px;
+  padding: 4rem;
+  margin-top: 2rem;
+  color: #2f6b3a;
+}
+
+.homePresentacion>p {
+  font-size: 35px;
+  margin-bottom: 3rem;
+}
+
+/*Seccion de localizacion*/
+.localizacion {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contenidolocaliz {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  max-width: 65vw; /* Limita el ancho total del contenido */
+  width: 100%;
+  padding: 0 1rem; 
+}
+
+.mapa {
+  min-width: 300px;
+  padding: 1rem 2rem; /* Más padding horizontal */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;
+}
+
+.mapa img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-ubicaciones {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.sede {
+  background-color: white;
+  padding: 1.5rem;
+  border-left: 5px solid #2f6b3a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 80%;
+}
+
+.sede p {
+  margin: 0.5em 0;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.sede ion-icon {
+  color: #2f6b3a;
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+
+/*Footer modificado*/
+.footerFinal {
+  background-color: black !important;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.footerFinal p {
+  background-color: black !important;
+  color: #fff;
+  text-align: center;
+  margin: 0.5em;
+}
+
+/*Añadida una parte con enlaces legales en el footer*/
+.footer-links {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.footer-links a {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/*Otra sección, con iconos de enlace a
+  las posibles redes sociales de la empresa*/
+.footer-redes {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-redes ion-icon {
+  background-color: black;
+}
+
+.footer-redes a {
+  color: #2f6b3a;
+  /* Verde matcha / botella */
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: black;
+}
+
+.footer-redes a:hover {
+  color: #cccccc;
+  /* Gris claro al pasar el ratón */
+  transform: scale(1.2);
+}
+
+/*SECCIÓN RESPONSIVE - en progreso*/
+
+/*TAMAÑOS según apuntes y enunciado de act:
+Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.
+Adaptación optimizada para verse en una tablet en posición horizontal. (1200)
+Adaptación optimizada para verse en una tablet en posición vertical. (992)
+Adaptación optimizada para verse en un teléfono posición horizontal. (768)
+Adaptación optimizada para verse en un teléfono posición vertical. (576)
+*/
+
+/* RESOLUCIONES DE MÁS DE 1300PX DE ANCHO*/
+/*Tamaño estándar de los elementos*/
+
+/* TABLET DE POSICIÓN VERTICAL 1200*/
+@media screen and (max-width: 1200px) {
+  #contenedor {
+    flex-direction: column;
   }
-  
+
+  #contenedor > section,
   #contenedor > aside {
-    flex: 1; /* El aside ocupa menos espacio */
-    padding: 20px;
-  }
-  
-  #contenedor > header,
-  #contenedor > nav {
-    width: 100%; /* El header y nav ocupan toda la fila arriba */
-
-    padding: 20px;
-    text-align: center;
-  }
-
- 
-
-
-  /*Barra de menú*/
-
-
-  .menuGeneral {
-    list-style: none;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    background-color: black;
-    padding: 0 2rem;
-    margin: 0;
-  }
-
-  .menuGeneral > li > a {
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    display: inline-block;
-    align-items: center; /* Alineación vertical */
-    padding: 0;
-    margin: 0;
+    width: 100%;
   }
 
   .menuGeneral li {
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
-    padding: 1rem;
+    padding: 0.4rem;
     background-color: black;
   }
 
-
-  .menuGeneral li a:not(.seccionactiva):hover {
-    transform: scale(1.1);
-  }
-
-  .menuGeneral > li.logo {
-    position: absolute;
-    left: 1rem; /* Logo alineado a la izquierda */
-    padding: 0;
-    
-  }
-  
-  .menuGeneral > li.logo img {
-    height: 6rem;
+  .menuGeneral>li.logo img {
+    height: 4rem;
     display: block;
     object-fit: contain;
-    background-color: black; /* Asegura que el fondo sea negro como el menú */
+    background-color: black;
+    display: block;
+    margin-left: 0.3em;
+  }
+
+  .contenidolocaliz {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  .mapa {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .mapa img {
+    max-width: 90%;
+    max-height: 95%;
+  }
+
+  .info-ubicaciones {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sede {
+    width: 100%;
+  }
+
+  .sede p{
+    width: 80%;
+  }
+
+  .homePresentacion {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .homePresentacion h1 {
+    font-size: 3rem;
+  }
+
+  .homePresentacion p {
+    font-size: 1.5rem;
+  }
+}
+
+/* TABLET DE POSICIÓN VERTICAL 992*/
+@media screen and (max-width: 992px) {
+  .menuGeneral li {
+    font-size: 16px;
+    text-align: center;
+    padding: 0.4rem;
+    background-color: black;
+  }
+
+  .menuGeneral>li.logo img {
+    height: 3rem;
+    display: block;
+    object-fit: contain;
+    background-color: black;
+    display: block;
+    margin-left: 0.3em;
+  }
+
+  .mapa {
+    max-width:95%;
+    max-height: 80%;
+  }
+  
+}
+
+/* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .contenedor > section,
+  .contenedor > aside {
+    width: 100%;
+    align-items: center;
+  }
+
+  .menuGeneral li {
+    font-size: 14px;
+    text-align: right;
+    padding: 0.2rem;
+    background-color: black;
+  }
+
+  .menuGeneral>li.logo img {
+    height: 3rem;
+    display: block;
+    object-fit: contain;
+    background-color: black;
+    display: block;
+    margin-left: 0.3em;
+  }
+
+  .homePresentacion {
+    text-align: center;
+  }
+
+  .homePresentacion h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .homePresentacion p {
+    font-size: 1.4rem;
+    margin: 2em;
+  }
+
+  .contenidolocaliz {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mapa {
+    max-width:95%;
+    max-height: 80%;
+  }
+
+  .info-ubicaciones {
+    width: 90%;
+    align-items: center;
+  }
+
+  .sede {
+    width: 100%;
+  }
+}
+
+
+/* TELÉFONO EN POSICIÓN VERTICAL 576*/
+@media screen and (max-width: 576px) {
+  .menuGeneral {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* Estilo general para todos los li */
+  .menuGeneral>li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* LOGOTIPO: arriba, centrado */
+  .menuGeneral>li.logo {
+    order: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuGeneral .logo img {
+    height: 5rem;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* ICONO DE HAMBURGUESA: segundo */
+  .menuGeneral>li.icon {
+    order: 1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .hamburguesa-icon {
+    font-size: 2rem;
+    color: white;
     display: block;
   }
 
-  .menuGeneral li a.seccionactiva {
-    color: green;
-  }
-
-   /*nav presentación*/
-  .homePresentacion> h1 {
-    font-size: 80px;
-    padding: 4rem;
-    margin-top: 2rem;
-    color: #2f6b3a;
-  }
-
-  .homePresentacion> p{
-    font-size: 35px;
-    margin-bottom: 3rem;
-  }
-
-  /*Footer modificado*/
-  .footerFinal {
-    background-color: black !important;
-    color: #fff;
-    padding: 0.5em;
-  }
-  
-  .footerFinal p {
-    background-color: black !important;
-    color: #fff;
-    text-align: center;
-    margin: 0.5em;
-  }
-  
-  /*Añadida una parte con enlaces legales en el footer*/
-  .footer-links {
+  /* Los elementos del menú se esconden con este tamaño de pantalla */
+  .menuGeneral>li:not(.logo):not(.icon) {
+    order: 2;
+    display: none;
+    flex-direction: column;
     background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 0.5em;
   }
-  
-  .footer-links a {
-    background-color: black;
-    color: #fff;
+
+  /* Así se ve el menú al hacer clic en el icono */
+  .menuGeneral.active>li:not(.logo):not(.icon) {
+    display: block;
+    /* Mostrar el menú */
+  }
+
+  .menu_item {
+    display: block;
+    padding: 0.75rem 0;
+    width: 100%;
+    color: white;
     text-decoration: none;
-    margin: 0.5em;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /*Otra sección, con iconos de enlace a
-  las posibles redes sociales de la empresa*/
-  .footer-redes {
     background-color: black;
+  }
+
+  .menu_item a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu_item a:hover {
+    background-color: #222;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Sección con los elementos apilados en columna */
+  .contenedor > section {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    width: 100%;
   }
-  
-  .footer-redes ion-icon {
-    background-color: black;
+
+  /* Aseguramos que header, article y footer en section tengan espacio entre ellos */
+  .contenedor > section header,
+  .contenedor > section article,
+  .contenedor > section footer {
+    margin-bottom: 1rem; /* Espaciado entre los elementos dentro de section */
   }
-  
-  .footer-redes a {
-    color: #2f6b3a;
-    /* Verde matcha / botella */
+
+  .contenedor > aside {
+    width: 100%;
+    margin-top: 1rem; /* Añadimos un margen superior para evitar que quede pegado a section */
+  }
+
+  .homePresentacion {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .homePresentacion h1 {
     font-size: 2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-    background-color: black;
   }
-  
-  .footer-redes a:hover {
-    color: #cccccc;
-    /* Gris claro al pasar el ratón */
-    transform: scale(1.2);
+
+  .homePresentacion p {
+    font-size: 1.3rem;
+  } 
+  /*LOCALIZACIONES*/
+  .contenidolocaliz {
+    max-width: 95vw; 
   }
-  
+
+  .mapa {
+    display: none;
+  }
+
+  .sede {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-links p {
+    margin-bottom: 0.3em;
+    /* Reduce espacio debajo del texto © 2025 */
+  }
+
+  .footer-links a {
+    margin: 0.2em 0;
+  }
+
+
+}
