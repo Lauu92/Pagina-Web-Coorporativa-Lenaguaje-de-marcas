@@ -1,9 +1,20 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "roboto";
-    background-color: white;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Atkinson", "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 @font-face {
@@ -11,51 +22,115 @@
   src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
 }
 
-body{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background:  rgb(248, 249, 249);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+#contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/fondoformu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+#contenedor header {
+  background-color: black;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+#contenedor>section {
+  flex: 3;
+  /* El section ocupa más espacio */
+  padding: 20px;
+}
+
+#contenedor>aside {
+  flex: 1;
+  /* El aside ocupa menos espacio */
+  padding: 20px;
+}
+
+#contenedor>header,
+#contenedor>nav {
+  width: 100%;
+  /* El header y nav ocupan toda la fila arriba */
+  padding: 20px;
+  text-align: center;
+}
+
+/*Barra de menú*/
 .menuGeneral {
+  list-style: none;
+  background-color: black;
   display: flex;
   align-items: center;
-  padding: 10px;
-  position: absolute; /* O relative, según el layout */
-  top: 0;
-  left: 0;
-  width: 100%; /* Asegura que el menú ocupe todo el ancho */
-  background-color: black; /* Opcional: para que tenga fondo */
+  justify-content: center;
+  padding: 0 2rem;
+  margin: 0;
+
 }
 
-.logo img {
-  height: 50px; /* Ajusta el tamaño del logo */
-}
-
- .menuGeneral h2{
-  font-family: "roboto";
-  color: white;
+.menuGeneral>li>a {
+  text-decoration: none;
   background-color: black;
+  color: white;
+  display: inline-block;
+  align-items: center;
+  /* Alineación vertical */
+  padding: 0;
+  margin: 0;
+}
+
+.menuGeneral li {
+  font-size: 25px;
   text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  width: 100%; /* O un ancho específico si lo prefieres */
- }
+  padding: 1rem;
+  background-color: black;
+}
+
+.menuGeneral li a:not(.seccionactiva):hover {
+  transform: scale(1.1);
+}
+
+.menuGeneral>li.logo {
+  position: absolute;
+  left: 1rem;
+  padding: 0;
+}
+
+.menuGeneral>li.logo img {
+  height: 6rem;
+  display: block;
+  object-fit: contain;
+  background-color: black;
+  /* Asegura que el fondo sea negro como el menú */
+  display: block;
+  max-height: 15rem ;
+}
+
+.menuGeneral li a.seccionactiva {
+  color: green;
+}
+
+.hamburguesa-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
 
 /*Cartas*/
 
 .card{
+    align-items: center;
     position: relative;
     width: 300px;
     height: 350px;
-    margin: 30px;
+    margin: 80px;
   }
   
   .card .face{
@@ -93,7 +168,7 @@ body{
   
   .card .back{
     transform: perspective(600px) rotateY(180deg);
-    background: rgb(6, 6, 6);
+    background: rgb(253, 253, 253);
     padding: 15px;
     color: rgb(17, 10, 1);
     display: flex;
@@ -131,10 +206,257 @@ body{
     transform: perspective(600px)rotateY(360deg);
   }
 
-   /*Footer copyright*/
+   /* SECCIÓN DE FOOTER - MODIFICADO A PARTIR DEL BASE*/
+.footerFinal {
+  background-color: black !important;
+  color: #fff;
+  padding: 0.5em;
+  width: 100%;
 
-   .footerFinal>p {
-    background-color: white;
-    text-align: center;
-    padding: 1rem;
+}
+
+.footerFinal p {
+  background-color: black !important;
+  color: #fff;
+  text-align: center;
+  margin: 0.5em;
+}
+
+/*Añadida una parte con enlaces legales en el footer*/
+.footer-links {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.footer-links a {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/*Otra sección, con iconos de enlace a
+las posibles redes sociales de la empresa*/
+.footer-redes {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-redes ion-icon {
+  background-color: black;
+}
+
+.footer-redes a {
+  color: #2f6b3a;
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: black;
+}
+
+.footer-redes a:hover {
+  color: #cccccc;
+  transform: scale(1.2);
+}
+
+/*SECCIÓN RESPONSIVE - en progreso*/
+
+/*TAMAÑOS según apuntes y enunciado de act:
+Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.
+Adaptación optimizada para verse en una tablet en posición horizontal. (1200)
+Adaptación optimizada para verse en una tablet en posición vertical. (992)
+Adaptación optimizada para verse en un teléfono posición horizontal. (768)
+Adaptación optimizada para verse en un teléfono posición vertical. (576)
+*/
+
+/* RESOLUCIONES DE MÁS DE 1300PX DE ANCHO*/
+@media screen and (min-width: 1300px) {
+  .mission-vision-values {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
   }
+
+  .mission-vision-values div {
+    flex: 1;
+  }
+}
+
+/* TABLET DE POSICIÓN VERTICAL 1200*/
+/*NO parece necesario hacer ajustes*/
+
+/* TABLET DE POSICIÓN VERTICAL 992*/
+@media screen and (min-width: 992px) {
+  .mission-vision-values {
+    display: flex;
+    flex-direction: column;
+    /* Apilar en columna */
+    gap: 10px;
+    /* Espacio entre las secciones */
+  }
+
+  .mission-vision-values div {
+    flex: 1;
+  }
+}
+
+/* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
+@media screen and (max-width: 991px) and (min-width: 758px) {
+  .mission-vision-values {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mission-vision-values div {
+    flex: 1;
+  }
+
+  .flipcards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textopresentquienes {
+    width: 90%;
+  }
+
+  .historia {
+    width: 100%;
+  }
+}
+
+
+/* TELÉFONO EN POSICIÓN VERTICAL 578*/
+@media screen and (max-width: 576px) {
+  .menuGeneral {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* Estilo general para todos los li */
+  .menuGeneral>li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* LOGOTIPO: arriba, centrado */
+  .menuGeneral>li.logo {
+    order: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuGeneral .logo img {
+    height: 5rem;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* ICONO DE HAMBURGUESA: segundo */
+  .menuGeneral>li.icon {
+    order: 1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .hamburguesa-icon {
+    font-size: 2rem;
+    color: white;
+    display: block;
+  }
+
+  /* Los elementos del menú se esconden con este tamaño de pantalla */
+  .menuGeneral>li:not(.logo):not(.icon) {
+    order: 2;
+    display: none;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  /* Así se ve el menú al hacer clic en el icono */
+  .menuGeneral.active>li:not(.logo):not(.icon) {
+    display: block;
+    /* Mostrar el menú */
+  }
+
+  .menu_item {
+    display: block;
+    padding: 0.75rem 0;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  .menu_item a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu_item a:hover {
+    background-color: #222;
+  }
+
+  .textopresentquienes {
+    width: 90%;
+  }
+
+  .historia {
+    width: 100%;
+  }
+
+  .mvv {
+    display: flex;
+    flex-direction: column;
+    /* Apilar en columna */
+    gap: 10px;
+    /* Espacio entre los recuadros */
+  }
+
+  .mvv div {
+    flex: 1;
+  }
+
+  .flipcard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+
+  .footer-links p {
+    margin-bottom: 0.3em; /* Reduce espacio debajo del texto © 2025 */
+  }
+
+  .footer-links a {
+    margin: 0.2em 0; 
+  }
+}
+  

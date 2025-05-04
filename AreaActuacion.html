@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styleActuacion.css">
-    <title>Projectos Personales(FlipCardHTML/CSS)</title>
+
+    <!--Libreria iconos web https://ionic.io -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!--Para el icono del menú-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <title>Area de actuacion</title>
+    <link rel="stylesheet" href="css/styleActuacion.css">
+
 </head>
+
 <body>
-    <ul class="menuGeneral">
-        <li class="logo"><img src="img/logo2.png" alt="logo"></li>
-        <li><h2>Area de Actuación</h2></li>   
-    </ul>
-    
+  
+    <div id="contenedor">
+        <header>
+            <ul class="menuGeneral">
+                <li class="logo"><img src="img/logo2.png" alt="logo"></li>
+                <li class="icon"><ion-icon class="hamburguesa-icon" name="menu-outline" size="large"></ion-icon></li>
+                <li><a href="index.html" class="menu_item">Inicio</a></li>
+                <!-- Incorporo un estilo que marca en color verde la sección en la que está el usuario,
+                 igual sobra-->
+                <li><a href="quienessomos.html" class="menu_item">Quiénes somos</a></li>
+                <li><a href="AreaActuacion.html" class="menu_item seccionactiva">Áreas de actuación</a></li>
+                <li><a href="index.html" class="menu_item">Noticias</a></li>
+                <li><a href="index.html" class="menu_item">Publicaciones</a></li>
+                <li><a href="index.html" class="menu_item">Localización</a></li>
+                <li><a href="#" class="menu_item">Contacto</a></li>
+            </ul>
+        </header>
     
 <div class="card">
 
@@ -74,9 +99,24 @@
     </div>
 </div>
 
-<footer class="footerFinal">
-    <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
-</footer>
+<!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
+     de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
+     <footer class="footerFinal">
+        <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
+        <div class="footer-links">
+            <p>© 2025 Eléctrica Random</p>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Política de cookies</a>
+        </div>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+    </footer>
 
     
 </body>
