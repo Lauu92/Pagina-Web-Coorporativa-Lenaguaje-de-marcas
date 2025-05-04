@@ -300,6 +300,47 @@ margin-top: 10vh;
   transform: scale(1.2);
 }
 
+/*FAQ*/
+.faqs {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  max-width: 600px;
+  width: 100%;
+  max-width: none;
+  margin: 0;           /* Nada de centrado */
+  font-family: sans-serif;
+  margin-top: 5rem;
+}
+
+.faqs h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+details[open] {
+  /*El atribut open hace que en las versiones modernas de los navegadores,
+  sin necesidad de javascript se abra automáticamente details al pulsar.*/
+  background-color: rgba(0, 128, 0, 0.283);
+  border-color: green;
+}
+
 /*SECCIÓN RESPONSIVE - en progreso*/
 
 /*TAMAÑOS según apuntes y enunciado de act:
