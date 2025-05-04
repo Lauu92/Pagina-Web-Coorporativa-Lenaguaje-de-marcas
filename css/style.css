@@ -339,6 +339,7 @@ details[open] {
   sin necesidad de javascript se abra automáticamente details al pulsar.*/
   background-color: rgba(0, 128, 0, 0.283);
   border-color: green;
+  transition: 2s;
 }
 
 /*SECCIÓN RESPONSIVE - en progreso*/
