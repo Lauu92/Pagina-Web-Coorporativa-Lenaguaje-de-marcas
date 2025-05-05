@@ -61,10 +61,10 @@ aside {
   display: block;
 }
 
-aside > img {
-width: 60vh;
-align-items: left;
-margin-right: 20px;
+aside>img {
+  width: 60vh;
+  align-items: left;
+  margin-right: 20px;
 }
 
 /*Section*/
@@ -75,7 +75,7 @@ section {
 
 /*Article*/
 article {
-margin-top: 10vh;
+  margin-top: 10vh;
 }
 
 
@@ -84,9 +84,7 @@ margin-top: 10vh;
 }
 
 /*Header*/
-
-
-.frase1  {
+.frase1 {
   color: green;
   font-size: 40px;
   width: 35vh;
@@ -149,6 +147,46 @@ margin-top: 10vh;
   color: green;
 }
 
+/*Submenú*/
+.submenu {
+  position: relative;
+}
+
+.submenu-items li a:not(.seccionactiva):hover {
+  transform: scale(1.1);
+}
+
+.submenu-items li a.seccionactiva {
+  color: green;
+}
+
+.submenu-items {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.submenu-items li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.submenu-items li a:hover {
+  background-color: green;
+}
+
+.submenu:hover .submenu-items {
+  display: block;
+}
+
 .hamburguesa-icon {
   display: none;
   font-size: 30px;
@@ -161,22 +199,23 @@ margin-top: 10vh;
   padding: 4rem;
   margin-top: 2rem;
   color: #2f6b3a;
-  text-shadow: 6px 6px 6px rgba(0, 0, 5, 10); /* Sombra para resaltar el título */
+  text-shadow: 6px 6px 6px rgba(0, 0, 5, 10);
+  /* Sombra para resaltar el título */
 }
 
-.homePresentacion2>h3{
+.homePresentacion2>h3 {
   font-size: 40px;
   padding: 4rem;
   margin-top: 2rem;
   color: #2f6b3a;
 }
 
- .homePresentacion2>p{
+.homePresentacion2>p {
   font-size: 35px;
   margin-bottom: 3rem;
   color: #2f6b3a;
-  
- }
+
+}
 
 .homePresentacion>p {
   font-size: 35px;
@@ -199,16 +238,19 @@ margin-top: 10vh;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  max-width: 65vw; /* Limita el ancho total del contenido */
+  max-width: 65vw;
+  /* Limita el ancho total del contenido */
   width: 100%;
-  padding: 0 1rem; 
+  padding: 0 1rem;
 }
 
 .mapa {
   min-width: 300px;
-  padding: 1rem 2rem; /* Más padding horizontal */
+  padding: 1rem 2rem;
+  /* Más padding horizontal */
   display: flex;
-  justify-content: center; /* Centrado horizontal */
+  justify-content: center;
+  /* Centrado horizontal */
   align-items: center;
 }
 
@@ -325,7 +367,8 @@ margin-top: 10vh;
   max-width: 600px;
   width: 100%;
   max-width: none;
-  margin: 0;           /* Nada de centrado */
+  margin: 0;
+  /* Nada de centrado */
   font-family: sans-serif;
   margin-top: 5rem;
 }
@@ -361,7 +404,7 @@ details[open] {
 
 .parallax {
   /* Imagen de fondo */
-  background-image: url(/img/SolarFondo.jpg);
+  background-image: url(/img/campo-de-girasoles-al-atardecer_1920x1080_xtrafondos.com.jpg);
 
   /* Fijo para el efecto parallax */
   background-attachment: fixed;
@@ -374,6 +417,53 @@ details[open] {
 
 .textoIndex {
   color: white;
+}
+
+.noticiasNacionales {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  margin: 0;
+  font-size: 40px;
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  height: 100%;
+  /* Ocupa toda la altura disponible del contenedor padre */
+  display: flex;
+  flex-direction: column;
+}
+
+.noticiasNacionales h1 {
+  color: #1e7e34;
+  font-size: 28px;
+  border-bottom: 2px solid #c4e3cb;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.noticiasNacionales ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+  /* Hace que la lista ocupe el espacio disponible dentro de noticiasNacionales */
+}
+
+.noticiasNacionales li {
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.noticiasNacionales a {
+  text-decoration: none;
+  color: #1e90ff;
+  transition: color 0.3s;
+}
+
+.noticiasNacionales a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
 }
 
 /*SECCIÓN RESPONSIVE - en progreso*/
@@ -395,8 +485,8 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
     flex-direction: column;
   }
 
-  #contenedor > section,
-  #contenedor > aside {
+  #contenedor>section,
+  #contenedor>aside {
     width: 100%;
   }
 
@@ -442,7 +532,7 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
     width: 100%;
   }
 
-  .sede p{
+  .sede p {
     width: 80%;
   }
 
@@ -479,10 +569,10 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   }
 
   .mapa {
-    max-width:95%;
+    max-width: 95%;
     max-height: 80%;
   }
-  
+
 }
 
 /* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
@@ -491,8 +581,8 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
     flex-direction: column;
   }
 
-  .contenedor > section,
-  .contenedor > aside {
+  .contenedor>section,
+  .contenedor>aside {
     width: 100%;
     align-items: center;
   }
@@ -533,7 +623,7 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   }
 
   .mapa {
-    max-width:95%;
+    max-width: 95%;
     max-height: 80%;
   }
 
@@ -636,22 +726,25 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   }
 
   /* Sección con los elementos apilados en columna */
-  .contenedor > section {
+  .contenedor>section {
     display: flex;
-    flex-direction: column; /* Los elementos se apilan verticalmente */
+    flex-direction: column;
+    /* Los elementos se apilan verticalmente */
     width: 100%;
   }
 
   /* Aseguramos que header, article y footer en section tengan espacio entre ellos */
-  .contenedor > section header,
-  .contenedor > section article,
-  .contenedor > section footer {
-    margin-bottom: 1rem; /* Espaciado entre los elementos dentro de section */
+  .contenedor>section header,
+  .contenedor>section article,
+  .contenedor>section footer {
+    margin-bottom: 1rem;
+    /* Espaciado entre los elementos dentro de section */
   }
 
-  .contenedor > aside {
+  .contenedor>aside {
     width: 100%;
-    margin-top: 1rem; /* Añadimos un margen superior para evitar que quede pegado a section */
+    margin-top: 1rem;
+    /* Añadimos un margen superior para evitar que quede pegado a section */
   }
 
   .homePresentacion {
@@ -665,10 +758,11 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
 
   .homePresentacion p {
     font-size: 1.3rem;
-  } 
+  }
+
   /*LOCALIZACIONES*/
   .contenidolocaliz {
-    max-width: 95vw; 
+    max-width: 95vw;
   }
 
   .mapa {
