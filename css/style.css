@@ -164,6 +164,20 @@ margin-top: 10vh;
   text-shadow: 6px 6px 6px rgba(0, 0, 5, 10); /* Sombra para resaltar el título */
 }
 
+.homePresentacion2>h3{
+  font-size: 40px;
+  padding: 4rem;
+  margin-top: 2rem;
+  color: #2f6b3a;
+}
+
+ .homePresentacion2>p{
+  font-size: 35px;
+  margin-bottom: 3rem;
+  color: #2f6b3a;
+  
+ }
+
 .homePresentacion>p {
   font-size: 35px;
   margin-bottom: 3rem;
@@ -347,7 +361,7 @@ details[open] {
 
 .parallax {
   /* Imagen de fondo */
-  background-image: url(/img/campo-de-girasoles-al-atardecer_1920x1080_xtrafondos.com.jpg);
+  background-image: url(/img/SolarFondo.jpg);
 
   /* Fijo para el efecto parallax */
   background-attachment: fixed;
