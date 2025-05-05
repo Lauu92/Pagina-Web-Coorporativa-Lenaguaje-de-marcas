@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon" alt="favicon logotipo">
 
     <title>ER - Contacto</title>
     <link rel="stylesheet" href="css/styleContacto.css">
@@ -39,7 +40,8 @@
 
         <!-- Banner con img de ienvenida -->
         <div class="contenedorformulario">
-            <form id="contacto" class="formulario-contacto" action="" method="post" enctype="multipart/form-data">
+            <form name="formucontacto" id="contacto" class="formulario-contacto" action="#" method="post"
+                enctype="multipart/form-data">
                 <h2>CONTACTE CON NOSOTROS PARA SOLICITAR MÁS INFORMACIÓN O UNA CITA</h2>
                 <fieldset>
                     <!-- Datos personales -->
@@ -47,24 +49,27 @@
                     <div class="campomasdeunacosa">
                         <div class="campoestrecho">
                             <label for="nombre">Nombre*</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Indique su nombre" required>
                         </div>
                         <div class="campoestrecho">
                             <label for="apellidos">Apellidos*</label>
-                            <input type="text" id="apellidos" name="apellidos" required>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Indique sus apellidos"
+                                required>
                         </div>
                     </div>
 
                     <div class="campomasdeunacosa">
                         <div class="campoestrecho">
-                        <label for="email">Correo electrónico*</label>
-                        <input type="email" id="email" name="email" required>
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" id="email" name="email"
+                                placeholder="Indique un correo electrónico de contacto" required>
+                        </div>
+                        <div class="campoestrecho">
+                            <label for="telefono">Tfno. (Opcional)</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                placeholder="Tel. con código de país (p. ej., +34 para España)">
+                        </div>
                     </div>
-                    <div class="campoestrecho">
-                        <label for="telefono">Tfno. (Opcional)</label>
-                        <input type="tel" id="telefono" name="telefono">
-                    </div>
-                </div>
                 </fieldset>
 
                 <fieldset>
@@ -110,36 +115,98 @@
                     <div class="campomasdeunacosa">
                         <div class="campoancho">
                             <label for="calle">Calle*</label>
-                            <input type="text" id="calle" name="calle" required>
+                            <input type="text" id="calle" name="calle" placeholder="P. ej., Avenida Random" required>
                         </div>
                         <div class="campoestrecho">
                             <label for="numero">Número*</label>
-                            <input type="text" id="numero" name="numero" required>
+                            <input type="text" id="numero" name="numero" placeholder="P. ej., 18" required>
                         </div>
                         <div class="campoestrecho">
                             <label for="piso">Piso</label>
-                            <input type="text" id="piso" name="piso">
+                            <input type="text" id="piso" name="piso" placeholder="P. ej., 3ºB">
                         </div>
                     </div>
 
                     <div class="campomasdeunacosa">
                         <div class="campoancho">
                             <label for="localidad">Localidad*</label>
-                            <input type="text" id="localidad" name="localidad" required>
+                            <input type="text" id="localidad" name="localidad" placeholder="Indique la localidad"
+                                required>
                         </div>
                         <div class="campoestrecho">
                             <label for="cp">Código postal*</label>
-                            <input type="text" id="cp" name="cp" required>
+                            <input type="text" id="cp" name="cp" placeholder="Indique el código postal (5 cifras)"
+                                maxlength="5" required>
                         </div>
                         <div class="campoestrecho">
                             <label for="provincia">Provincia*</label>
-                            <input type="text" id="provincia" name="provincia" required>
+                            <select id="provincia" name="provincia" required>
+                                <option value="0" disabled selected>Seleccione una provincia</option>
+                                <option value="1">Álava</option>
+                                <option value="2">Albacete</option>
+                                <option value="3">Alicante</option>
+                                <option value="4">Almería</option>
+                                <option value="5">Asturias</option>
+                                <option value="6">Ávila</option>
+                                <option value="7">Badajoz</option>
+                                <option value="8">Barcelona</option>
+                                <option value="9">Burgos</option>
+                                <option value="10">Cáceres</option>
+                                <option value="11">Cádiz</option>
+                                <option value="12">Cantabria</option>
+                                <option value="13">Castellón (Castelló)</option>
+                                <option value="14">Ciudad Real</option>
+                                <option value="15">Córdoba</option>
+                                <option value="16">Cuenca</option>
+                                <option value="17">Girona</option>
+                                <option value="18">Granada</option>
+                                <option value="19">Guadalajara</option>
+                                <option value="20">Guipúzcoa</option>
+                                <option value="21">Huelva</option>
+                                <option value="22">Huesca</option>
+                                <option value="23">Illes Balears</option>
+                                <option value="24">Jaén</option>
+                                <option value="25">La Coruña</option>
+                                <option value="26">La Rioja</option>
+                                <option value="27">Las Palmas</option>
+                                <option value="28">León</option>
+                                <option value="29">Lleida</option>
+                                <option value="30">Lugo</option>
+                                <option value="31">Madrid</option>
+                                <option value="32">Málaga</option>
+                                <option value="33">Murcia</option>
+                                <option value="34">Navarra</option>
+                                <option value="35">Ourense</option>
+                                <option value="36">Palencia</option>
+                                <option value="37">Pontevedra</option>
+                                <option value="38">Salamanca</option>
+                                <option value="39">Santa Cruz de Tenerife</option>
+                                <option value="40">Segovia</option>
+                                <option value="41">Sevilla</option>
+                                <option value="42">Soria</option>
+                                <option value="43">Tarragona</option>
+                                <option value="44">Teruel</option>
+                                <option value="45">Toledo</option>
+                                <option value="46">Valencia</option>
+                                <option value="47">Valladolid</option>
+                                <option value="48">Vizcaya</option>
+                                <option value="49">Zamora</option>
+                                <option value="50">Zaragoza</option>
+                                <option value="51">Ceuta</option>
+                                <option value="52">Melilla</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="campo" id="cupstamanio">
                         <label for="cups">CUPS*</label>
-                        <input type="text" id="cups" name="cups" required>
+                        <input type="text" id="cups" name="cups" placeholder="Código Universal de Punto de Suministro"
+                            required>
+                    </div>
+
+                    <div class="campoestrecho" id="fechaaltainstal">
+                        <label for="fechaaltainstal">Fecha de alta*</label>
+                        <input type="date" id="fechaaltainstal" name="fechaaltainstal" required>
                     </div>
 
                     <div class="campo">

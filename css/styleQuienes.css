@@ -17,8 +17,6 @@ body {
   background-color: white;
 }
 
-
-
 @font-face {
   font-family: "roboto";
   src: url(/font/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
@@ -41,28 +39,22 @@ header {
 
 #contenedor>section {
   flex: 3;
-  /* El section ocupa más espacio */
   padding: 20px;
 }
 
 #contenedor>aside {
   flex: 1;
-  /* El aside ocupa menos espacio */
   padding: 20px;
 }
 
 #contenedor>header,
 #contenedor>nav {
   width: 100%;
-  /* El header y nav ocupan toda la fila arriba */
   padding: 20px;
   text-align: center;
 }
 
 /*Barra de menú*/
-/*Barra de menú*/
-
-
 .menuGeneral {
   list-style: none;
   background-color: black;
@@ -79,7 +71,6 @@ header {
   color: white;
   display: inline-block;
   align-items: center;
-  /* Alineación vertical */
   padding: 0;
   margin: 0;
 }
@@ -99,9 +90,7 @@ header {
 .menuGeneral>li.logo {
   position: absolute;
   left: 1rem;
-  /* Logo alineado a la izquierda */
   padding: 0;
-
 }
 
 .menuGeneral>li.logo img {
@@ -109,7 +98,6 @@ header {
   display: block;
   object-fit: contain;
   background-color: black;
-  /* Asegura que el fondo sea negro como el menú */
   display: block;
 }
 
@@ -140,13 +128,6 @@ header {
   display: flex;
 }
 
-
-/*Fooer copyright*/
-
-.footerFinal>p {
-  background-color: white;
-  text-align: center;
-}
 
 /*SECCION ESPECÍFICA DE HTML QUIENES SOMOS*/
 /* Banner de bienvenida con imagen*/
@@ -434,18 +415,13 @@ las posibles redes sociales de la empresa*/
   transform: scale(1.2);
 }
 
-/*SECCIÓN RESPONSIVE - en progreso*/
+/*SECCIÓN RESPONSIVE*/
+/*TAMAÑOS según el enunciado de la actividad:*/
 
-/*TAMAÑOS según apuntes y enunciado de act:
-Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.
-Adaptación optimizada para verse en una tablet en posición horizontal. (1200)
-Adaptación optimizada para verse en una tablet en posición vertical. (992)
-Adaptación optimizada para verse en un teléfono posición horizontal. (768)
-Adaptación optimizada para verse en un teléfono posición vertical. (576)
-*/
-
+/* ------------------------------------------------------------------  */
 /* RESOLUCIONES DE MÁS DE 1300PX DE ANCHO*/
-@media screen and (min-width: 1300px) {
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 1300px) {
   .mission-vision-values {
     display: flex;
     justify-content: space-between;
@@ -457,17 +433,40 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   }
 }
 
+/* ------------------------------------------------------------------  */
 /* TABLET DE POSICIÓN VERTICAL 1200*/
-/*NO parece necesario hacer ajustes*/
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 1299px) and (min-width: 1200px) {
+  .menuGeneral li {
+    font-size: 22px;
+  }
+}
 
+
+/* ------------------------------------------------------------------  */
 /* TABLET DE POSICIÓN VERTICAL 992*/
-@media screen and (min-width: 992px) {
+/* ------------------------------------------------------------------  */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .menuGeneral {
+    text-align: end;
+  }
+
+  .menuGeneral li {
+    font-size: 14px;
+  }
+
+  .menuGeneral>li.logo img {
+    height: 3rem;
+    display: block;
+    object-fit: contain;
+    background-color: black;
+    display: block;
+  }
+
   .mission-vision-values {
     display: flex;
     flex-direction: column;
-    /* Apilar en columna */
     gap: 10px;
-    /* Espacio entre las secciones */
   }
 
   .mission-vision-values div {
@@ -475,35 +474,10 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   }
 }
 
+/* ------------------------------------------------------------------  */
 /* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
-@media screen and (max-width: 991px) and (min-width: 758px) {
-  .mission-vision-values {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .mission-vision-values div {
-    flex: 1;
-  }
-
-  .flipcards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .textopresentquienes {
-    width: 90%;
-  }
-
-  .historia {
-    width: 100%;
-  }
-}
-
-
-/* TELÉFONO EN POSICIÓN VERTICAL 578*/
-@media screen and (max-width: 576px) {
+/* ------------------------------------------------------------------  */
+@media screen and (min-width: 758px) and (max-width: 991px) {
   .menuGeneral {
     flex-direction: column;
     align-items: center;
@@ -533,7 +507,7 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
     margin: 0 auto;
   }
 
-  /* ICONO DE HAMBURGUESA: segundo */
+  /* ICONO DE HAMBURGUESA */
   .menuGeneral>li.icon {
     order: 1;
     display: flex !important;
@@ -561,7 +535,114 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   /* Así se ve el menú al hacer clic en el icono */
   .menuGeneral.active>li:not(.logo):not(.icon) {
     display: block;
-    /* Mostrar el menú */
+  }
+
+  .menu_item {
+    display: block;
+    padding: 0.75rem 0;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  .menu_item a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu_item a:hover {
+    background-color: #222;
+  }
+
+  .mvv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mvv div {
+    flex: 1;
+  }
+
+  .flipcards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textopresentquienes {
+    width: 90%;
+    align-items: center;
+  }
+
+  .historia {
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------------  */
+/* TELÉFONO EN POSICIÓN VERTICAL 578*/
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 578px) {
+  .menuGeneral {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* Estilo general para todos los li */
+  .menuGeneral>li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* LOGOTIPO: arriba, centrado */
+  .menuGeneral>li.logo {
+    order: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuGeneral .logo img {
+    height: 5rem;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* ICONO DE HAMBURGUESA */
+  .menuGeneral>li.icon {
+    order: 1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .hamburguesa-icon {
+    font-size: 2rem;
+    color: white;
+    display: block;
+  }
+
+  /* Los elementos del menú se esconden con este tamaño de pantalla */
+  .menuGeneral>li:not(.logo):not(.icon) {
+    order: 2;
+    display: none;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  /* Así se ve el menú al hacer clic en el icono */
+  .menuGeneral.active>li:not(.logo):not(.icon) {
+    display: block;
   }
 
   .menu_item {
@@ -595,9 +676,7 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   .mvv {
     display: flex;
     flex-direction: column;
-    /* Apilar en columna */
     gap: 10px;
-    /* Espacio entre los recuadros */
   }
 
   .mvv div {
@@ -612,14 +691,14 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   .footer-links {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; 
+    gap: 0.5rem;
   }
 
   .footer-links p {
-    margin-bottom: 0.3em; /* Reduce espacio debajo del texto © 2025 */
+    margin-bottom: 0.3em;
   }
 
   .footer-links a {
-    margin: 0.2em 0; 
+    margin: 0.2em 0;
   }
 }

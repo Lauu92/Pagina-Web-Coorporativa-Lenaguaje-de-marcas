@@ -42,20 +42,17 @@ header {
 
 #contenedor>section {
   flex: 3;
-  /* El section ocupa más espacio */
   padding: 20px;
 }
 
 #contenedor>aside {
   flex: 1;
-  /* El aside ocupa menos espacio */
   padding: 20px;
 }
 
 #contenedor>header,
 #contenedor>nav {
   width: 100%;
-  /* El header y nav ocupan toda la fila arriba */
   padding: 20px;
   text-align: center;
 }
@@ -77,7 +74,6 @@ header {
   color: white;
   display: inline-block;
   align-items: center;
-  /* Alineación vertical */
   padding: 0;
   margin: 0;
 }
@@ -104,7 +100,6 @@ header {
   display: block;
   object-fit: contain;
   background-color: black;
-  /* Asegura que el fondo sea negro como el menú */
   display: block;
 }
 
@@ -134,11 +129,6 @@ header {
   display: flex;
 }
 
-/*Fooer copyright*/
-.footerFinal>p {
-  background-color: white;
-  text-align: center;
-}
 
 /*SECCION ESPECÍFICA DE HTML CONTACTO*/
 /* Banner de bienvenida con imagen*/
@@ -158,13 +148,12 @@ header {
   border-radius: 8px;
 }
 
-.formulario-contacto H2{
+.formulario-contacto h2 {
   color: #2a2a2a;
   margin: 0.3em;
   margin-bottom: 0.6em;
   text-align: center;
 }
-
 
 .formulario-contacto fieldset {
   border: none;
@@ -175,7 +164,7 @@ header {
 .formulario-contacto legend {
   font-weight: bold;
   font-size: 1.2em;
-  color:green;
+  color: green;
   margin-bottom: 0.5em;
   margin-top: 0.6em;
 }
@@ -194,11 +183,12 @@ header {
 
 .camporadio {
   display: flex;
-  flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
-  gap: 1em;         /* Espaciado entre opciones */
+  /*Así apilo los elementos al estrechar la pantalla*/
+  flex-wrap: wrap;
+  gap: 1em;
   padding: 0.5em;
   align-items: center;
-  justify-content: flex-start; /* Alinea a la izquierda */
+  justify-content: flex-start;
   margin-top: 0.5em;
 }
 
@@ -213,7 +203,7 @@ header {
   margin-top: 0.3em;
 }
 
-.campomasdeunacosa div{
+.campomasdeunacosa div {
   flex: 1;
   min-width: 150px;
 }
@@ -228,6 +218,15 @@ header {
   width: 15%;
   display: flex;
   flex-direction: column;
+}
+
+.campoestrecho input[type="date"] {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 1px solid #555;
+  font-size: 1em;
 }
 
 input[type="text"],
@@ -250,15 +249,14 @@ textarea {
   resize: vertical;
 }
 
-
 .condiciones .campo {
   margin-bottom: 0.8em;
 }
 
 .acciones {
   display: flex;
-  justify-content: center; /* Centra los botones */
-  gap: 2em;                /* Espacio entre botones */
+  justify-content: center;
+  gap: 2em;
   margin-top: 1.5em;
 }
 
@@ -348,58 +346,94 @@ las posibles redes sociales de la empresa*/
   transform: scale(1.2);
 }
 
-/*SECCIÓN RESPONSIVE - en progreso*/
+/*SECCIÓN RESPONSIVE*/
+/*TAMAÑOS según el enunciado de la actividad*/
 
-/*TAMAÑOS según apuntes y enunciado de act:
-Adaptación de ancho fijo de resoluciones de más de 1300px de ancho.
-Adaptación optimizada para verse en una tablet en posición horizontal. (1200)
-Adaptación optimizada para verse en una tablet en posición vertical. (992)
-Adaptación optimizada para verse en un teléfono posición horizontal. (768)
-Adaptación optimizada para verse en un teléfono posición vertical. (576)
-*/
-
+/* ------------------------------------------------------------------  */
 /* RESOLUCIONES DE MÁS DE 1300PX DE ANCHO*/
-@media screen and (min-width: 1300px) {
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 1300px) {
+  .menuGeneral li {
+    font-size: 22px;
+  }
+
   select {
     width: 49%;
+  }
+
+  .menuGeneral>li.logo img {
+    height: 3rem;
+    display: block;
+    object-fit: contain;
+    background-color: black;
+    display: block;
+    margin-left: 0.3em;
+  }
+
+  #provincia {
+    width: 100%;
   }
 
   #cupstamanio {
     width: 32%;
   }
+
+  #fechaaltainstal {
+    width: 56%;
+
+  }
 }
 
+
+/* ------------------------------------------------------------------  */
 /* TABLET DE POSICIÓN VERTICAL 1200*/
-@media screen and (max-width: 1200px) {
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 1299px) and (min-width: 1200px) {
+  .menuGeneral li {
+    font-size: 22px;
+  }
+
   .formulario-contacto {
     padding: 2em;
     max-width: 65vw;
   }
-}
 
-/* TABLET DE POSICIÓN VERTICAL 992*/
-/*NO parece necesario ningún ajuste, se ve bien*/
-
-/* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
-@media screen and (max-width: 991px) and (min-width: 758px) {
-  .formulario-contacto {
-    max-width: 90vw;
-    padding: 1em;
+  .menuGeneral>li.logo img {
+    height: 3rem;
+    display: block;
+    object-fit: contain;
+    background-color: black;
+    display: block;
   }
 
-  .campomasdeunacosa {
-    flex-direction: column;
-  }
-
-  .campoestrecho,
-  .campoancho {
+  #fechaaltainstal {
     width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.6em;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+}
+
+/* ------------------------------------------------------------------  */
+/* TABLET DE POSICIÓN VERTICAL 992*/
+/* ------------------------------------------------------------------  */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .menuGeneral li {
+    font-size: 16px;
+  }
+
+  .menuGeneral .logo img {
+    height: 2rem;
   }
 }
 
 
-/* TELÉFONO EN POSICIÓN VERTICAL 578*/
-@media screen and (max-width: 576px) {
+/* ------------------------------------------------------------------  */
+/* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
+/* ------------------------------------------------------------------  */
+@media screen and (min-width: 758px) and (max-width: 991px) {
   .menuGeneral {
     flex-direction: column;
     align-items: center;
@@ -429,7 +463,7 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
     margin: 0 auto;
   }
 
-  /* ICONO DE HAMBURGUESA: segundo */
+  /* ICONO DE HAMBURGUESA */
   .menuGeneral>li.icon {
     order: 1;
     display: flex !important;
@@ -457,7 +491,105 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
   /* Así se ve el menú al hacer clic en el icono */
   .menuGeneral.active>li:not(.logo):not(.icon) {
     display: block;
-    /* Mostrar el menú */
+  }
+
+  .menu_item {
+    display: block;
+    padding: 0.75rem 0;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  .menu_item a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu_item a:hover {
+    background-color: #222;
+  }
+
+  .formulario-contacto {
+    max-width: 90vw;
+    padding: 1em;
+  }
+
+  .campomasdeunacosa {
+    flex-direction: column;
+  }
+
+  .campoestrecho,
+  .campoancho {
+    width: 100%;
+  }
+}
+
+
+/* ------------------------------------------------------------------  */
+/* TELÉFONO EN POSICIÓN VERTICAL 578*/
+/* ------------------------------------------------------------------  */
+@media screen and (max-width: 578px) {
+  .menuGeneral {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* Estilo general para todos los li */
+  .menuGeneral>li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* LOGOTIPO: arriba, centrado */
+  .menuGeneral>li.logo {
+    order: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuGeneral .logo img {
+    height: 5rem;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* ICONO DE HAMBURGUESA */
+  .menuGeneral>li.icon {
+    order: 1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .hamburguesa-icon {
+    font-size: 2rem;
+    color: white;
+    display: block;
+  }
+
+  /* Los elementos del menú se esconden con este tamaño de pantalla */
+  .menuGeneral>li:not(.logo):not(.icon) {
+    order: 2;
+    display: none;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  /* Así se ve el menú al hacer clic en el icono */
+  .menuGeneral.active>li:not(.logo):not(.icon) {
+    display: block;
   }
 
   .menu_item {
@@ -486,27 +618,35 @@ Adaptación optimizada para verse en un teléfono posición vertical. (576)
 
   .camporadio {
     flex-direction: column;
-    align-items: flex-start; /* Opcional, alinea a la izquierda */
-    gap: 0.4em; /* Espacio entre radios más compacto */
+    align-items: flex-start;
+    gap: 0.4em;
   }
 
   select {
     width: 100%;
   }
 
+  #fechaaltainstal {
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.6em;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+
   .footer-links {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem; 
+    gap: 0.5rem;
   }
 
   .footer-links p {
-    margin-bottom: 0.3em; /* Reduce espacio debajo del texto © 2025 */
+    margin-bottom: 0.3em;
   }
 
   .footer-links a {
-    margin: 0.2em 0; 
+    margin: 0.2em 0;
   }
-
 
 }
