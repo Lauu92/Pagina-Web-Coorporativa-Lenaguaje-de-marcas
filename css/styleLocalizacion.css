@@ -1,0 +1,71 @@
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .botones label {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: 3px solid #388E3C;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  #madrid:checked ~ .botones label[for="madrid"],
+  #barcelona:checked ~ .botones label[for="barcelona"],
+  #malaga:checked ~ .botones label[for="malaga"] {
+    background-color: #2E7D32;
+    transform: scale(1.05);
+  }
+  
+  /* Contenedor de mapa y texto juntos */
+  .mapa-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  /* Ocultar todos los mapas + textos */
+  .mapa {
+    display: none;
+    max-width: 90%;
+  }
+  
+  /* Mostrar solo el seleccionado */
+  #madrid:checked ~ .mapa-contenido .madrid,
+  #barcelona:checked ~ .mapa-contenido .barcelona,
+  #malaga:checked ~ .mapa-contenido .malaga {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .imagen-mapa {
+    max-width: 400px;
+    flex-shrink: 0;
+    border: 3px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  /* Clase de descripción (ya deberías tenerla, aquí por si acaso) */
+  .descripcion {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-style: italic;
+  }
