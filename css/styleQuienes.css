@@ -105,6 +105,45 @@ header {
   color: green;
 }
 
+/*Submenú*/
+.submenu {
+  position: relative;
+}
+
+.submenu-items li a:not(.seccionactiva):hover {
+  transform: scale(1.1);
+}
+
+.submenu-items li a.seccionactiva {
+  color: green;
+}
+
+.submenu-items {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.submenu-items li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.submenu-items li a:hover {
+  background-color: green;
+}
+
+.submenu:hover .submenu-items {
+  display: block;
+}
 
 .hamburguesa-icon {
   display: none;
