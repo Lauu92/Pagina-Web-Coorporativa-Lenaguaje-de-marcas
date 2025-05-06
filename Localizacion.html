@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Localización</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLocalizacion.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+    <body>
+        <div id="contenedor">
+            <header>
+                <ul class="menuGeneral">
+                    <li class="logo"><img src="img/logo2.png" alt="logo"></li>
+                    <li class="icon"><ion-icon class="hamburguesa-icon" name="menu-outline" size="large"></ion-icon></li>
+                    <li><a href="index.html" class="menu_item">Inicio</a></li>
+                    <li><a href="quienessomos.html" class="menu_item">Quiénes somos</a></li>
+                    <li><a href="AreaActuacion.html" class="menu_item">Áreas de actuación</a></li>
+                    <li class="submenu">
+                        <a  class="menu_item">Noticias</a>
+                        <ul class="submenu-items">
+                          <li><a href="nacionales.html">Noticias Nacionales</a></li>
+                          <li><a href="internacionales.html">Noticias Internacionales</a></li>
+                          <li><a href="eventos.html">Eventos</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="index.html#electric-random" class="menu_item">Publicaciones</a></li>
+                    <li><a href="#" class="menu_item seccionactiva">Localización</a></li>
+                    <li><a href="contacto.html" class="menu_item">Contacto</a></li>
+                </ul>
+            </header>
+    
+            <nav class="homePresentacion">
+                <h1>BUSCANOS CERCA DE TI</h1>
+                <h2><p>¿Buscas atención personalizada? Acércate a la sucursal más próxima o llámanos hoy mismo.</p></h2>
+                
+            </nav>
+    
+            <section>
+                <input type="radio" name="ciudad" id="madrid" checked>
+                <input type="radio" name="ciudad" id="barcelona">
+                <input type="radio" name="ciudad" id="malaga">
+              
+                <div class="botones">
+                  <label for="madrid">Madrid</label>
+                  <label for="barcelona">Barcelona</label>
+                  <label for="malaga">Málaga</label>
+                </div>
+              
+                <div class="mapa-contenido">
+                    <div class="mapa madrid">
+                      <img src="/img/madrid.jpg" class="imagen-mapa" alt="Mapa de Madrid">
+                      <div class="sede">
+                        <p><ion-icon name="home-outline"></ion-icon> Direccion de sede madrid</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 999 111 111</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> sede.1@elecrandom.com</p>
+                    </div>
+                    </div>
+                    <div class="mapa barcelona">
+                      <img src="/img/barcelona.jpg" class="imagen-mapa" alt="Mapa de Barcelona">
+                      <div class="sede">
+                    <p><ion-icon name="home-outline"></ion-icon> Direccion de sede barcelona</p> 
+                    <p> <ion-icon name="call-outline"></ion-icon> +34 999 111 112 </p>    
+                    <p><ion-icon name="mail-outline"></ion-icon> sede.2@elecrandom.com</p>
+                    </div>
+                    </div>
+                    <div class="mapa malaga">
+                      <img src="/img/malaga.jpg" class="imagen-mapa" alt="Mapa de Málaga">
+                      <div class="sede">
+                        <p><ion-icon name="home-outline"></ion-icon>Direccion de sede malaga</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 999 111 113</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> sede.3@elecrandom.com</p></div>
+                </div>
+              
+            </section>
+    
+        </div>
+    
+        <!-- Este footer, además del texto del copyright, incorpora la típica sección de enlaces
+         de aspectos legales (como privacidad y cookies) e iconos de redes sociales de la empresa-->
+    
+    
+        <footer class="footerFinal">
+            <p>&copy;Web Personal creada para la materia de Lenguaje de Marcas UNIR 2025</p>
+            <div class="footer-links">
+                <p>© 2025 Eléctrica Random</p>
+                <a href="#">Aviso legal</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Política de cookies</a>
+            </div>
+            <div class="footer-redes">
+                <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://linkedin.com" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+        </footer>
+    
+    
+        <script>
+            // Cuando se haga clic en el icono de la hamburguesa
+            document.querySelector('.hamburguesa-icon').addEventListener('click', function () {
+                // Encuentra el contenedor de los elementos del menú
+                const menuItems = document.querySelectorAll('.menuGeneral > li:not(.logo):not(.icon)');
+    
+                // Alterna la visibilidad de los elementos del menú
+                menuItems.forEach(item => {
+                    item.style.display = item.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
+        <script>
+            const hamburguesa = document.querySelector('.hamburguesa-icon');
+            const menu = document.querySelector('.menuGeneral');
+    
+            hamburguesa.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+        </script>
+    
+    </body>
+    
+    </html>
