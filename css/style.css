@@ -404,7 +404,7 @@ details[open] {
 
 .parallax {
   /* Imagen de fondo */
-  background-image: url(/img/campo-de-girasoles-al-atardecer_1920x1080_xtrafondos.com.jpg);
+  background-image: url(../img/girasol.jpg);
 
   /* Fijo para el efecto parallax */
   background-attachment: fixed;
