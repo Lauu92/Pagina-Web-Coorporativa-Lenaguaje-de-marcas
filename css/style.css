@@ -404,7 +404,7 @@ details[open] {
 
 .parallax {
   /* Imagen de fondo */
-  background-image: url(./img/girasol.jpg);
+  background-image: url('../img/girasol.jpg');
 
   /* Fijo para el efecto parallax */
   background-attachment: fixed;
