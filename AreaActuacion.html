@@ -64,7 +64,7 @@
 
     <div class="card">
             <div class="face front"> 
-                <img src="Img/hidraulica.jpg" alt="">
+                <img src="img/hidraulica.jpg" alt="">
                 <h3>Hidráulica/Hidroeléctrica</h3>
             </div>
 
@@ -79,7 +79,7 @@
      
     <div class="card">
             <div class="face front"> 
-                 <img src="Img/solar.jpg" alt="">
+                 <img src="img/solar.jpg" alt="">
                  <h3>Solar</h3>
             </div>
 
@@ -94,7 +94,7 @@
      
      <div class="card">
            <div class="face front"> 
-              <img src="Img/almacenamiento.jpg" alt="">
+              <img src="img/almacenamiento.jpg" alt="">
               <h3>Almacenamiento Energético</h3>
            </div>
 
@@ -125,6 +125,28 @@
             <a href="https://youtube.com" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
         </div>
     </footer>
+
+
+    <script>
+        // Cuando se haga clic en el icono de la hamburguesa
+        document.querySelector('.hamburguesa-icon').addEventListener('click', function () {
+            // Encuentra el contenedor de los elementos del menú
+            const menuItems = document.querySelectorAll('.menuGeneral > li:not(.logo):not(.icon)');
+
+            // Alterna la visibilidad de los elementos del menú
+            menuItems.forEach(item => {
+                item.style.display = item.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+    <script>
+        const hamburguesa = document.querySelector('.hamburguesa-icon');
+        const menu = document.querySelector('.menuGeneral');
+
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 
     
 </body>
