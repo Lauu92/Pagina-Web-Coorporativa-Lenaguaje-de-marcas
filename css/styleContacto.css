@@ -1,3 +1,6 @@
+/*Consultar comentarios de cssQuienes,
+las observaciones se aplican a ambos, ya que
+uno ha servido de plantilla para el otro documento*/
 * {
   margin: 0px;
   padding: 0px;
@@ -422,6 +425,10 @@ las posibles redes sociales de la empresa*/
     width: 56%;
 
   }
+
+  .formulario-contacto {
+    max-width: 80vw;
+  }
 }
 
 
@@ -454,6 +461,14 @@ las posibles redes sociales de la empresa*/
     border-radius: 8px;
     font-size: 1em;
   }
+
+  .formulario-contacto {
+    max-width: 80vw;
+  }
+
+  #fechaaltainstal {
+    width: 55%;
+  }
 }
 
 /* ------------------------------------------------------------------  */
@@ -467,6 +482,11 @@ las posibles redes sociales de la empresa*/
   .menuGeneral .logo img {
     height: 2rem;
   }
+
+  .formulario-contacto {
+    max-width: 90vw;
+  }
+
 }
 
 
@@ -474,6 +494,7 @@ las posibles redes sociales de la empresa*/
 /* TELÉFONO EN POSICIÓN HORIZONTAL 768*/
 /* ------------------------------------------------------------------  */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
   .menuGeneral>li.logo,
   .menuGeneral>li.icon {
     display: inline-flex;
@@ -559,7 +580,7 @@ las posibles redes sociales de la empresa*/
   .menu_item a:hover {
     background-color: #222;
   }
-  
+
 
   .formulario-contacto {
     max-width: 90vw;
@@ -574,6 +595,17 @@ las posibles redes sociales de la empresa*/
   .campoancho {
     width: 100%;
   }
+
+  #solicitud,
+  #producto,
+  #tipo-cliente {
+    width: 100%;
+  }
+
+  #cupstamanio {
+    width: 100%;
+  }
+
 }
 
 
@@ -581,6 +613,7 @@ las posibles redes sociales de la empresa*/
 /* TELÉFONO EN POSICIÓN VERTICAL 578*/
 /* ------------------------------------------------------------------  */
 @media screen and (max-width: 578px) {
+
   .menuGeneral>li.logo,
   .menuGeneral>li.icon {
     display: inline-flex;
@@ -675,6 +708,10 @@ las posibles redes sociales de la empresa*/
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4em;
+  }
+
+  #cupstamanio {
+    width: 100%;
   }
 
   select {

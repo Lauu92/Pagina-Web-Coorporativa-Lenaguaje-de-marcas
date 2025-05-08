@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/favicon.png">
-    
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" alt="favicon logotipo">
+
     <!--Libreria iconos web https://ionic.io -->
+    <!--Esta forma en enlazar a la librería de iconos, y la propia librería concreta,
+    nos la enseño Raúl en clase y nos animó a usarla también las actividades. -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <!--Para el icono del menú-->
+    <!--Esta parte del código está tomada de una de las páginas de ejemplo de Raúl, que nos animó a usar
+    en los trabajos. Así podemos incluir el icono del menú de hamburguesa en nuestra web.-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon" alt="favicon logotipo">
 
     <title>ER - Quienes somos</title>
     <link rel="stylesheet" href="css/styleQuienes.css">
@@ -23,27 +26,31 @@
 <body>
     <div id="contenedor">
         <header>
+            <!--El menú está hecho mediante una lista desordenada, siguiendo uno de los ejemplos de Raúl,
+            ya que nos ha parecido que daba buen resultado en el aspecto del sitio web. -->
             <ul class="menuGeneral">
                 <li class="logo"><img src="img/logo2.png" alt="logo"></li>
                 <li class="icon"><ion-icon class="hamburguesa-icon" name="menu-outline" size="large"></ion-icon></li>
                 <li><a href="index.html" class="menu_item">Inicio</a></li>
                 <li><a href="#" class="menu_item seccionactiva">Quiénes somos</a></li>
                 <li><a href="AreaActuacion.html" class="menu_item">Áreas de actuación</a></li>
+                <!-- El submenú en este caso, está tomado del código de index.html, que a su vez
+                 sigue uno de los ejemplos de Raúl para crear menús desplegables.-->
                 <li class="submenu">
                     <a href="#" class="menu_item">Noticias</a>
                     <ul class="submenu-items">
-                      <li><a href="nacionales.html">Noticias Nacionales</a></li>
-                      <li><a href="internacionales.html">Noticias Internacionales</a></li>
-                      <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="nacionales.html">Noticias Nacionales</a></li>
+                        <li><a href="internacionales.html">Noticias Internacionales</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
                     </ul>
-                  </li>
+                </li>
                 <li><a href="index.html#electric-random" class="menu_item">Publicaciones</a></li>
                 <li><a href="Localizacion.html" class="menu_item">Localización</a></li>
                 <li><a href="contacto.html" class="menu_item">Contacto</a></li>
             </ul>
         </header>
 
-        <!-- Banner con img de ienvenida -->
+        <!-- Banner con img de bienvenida -->
         <div class="bannerquienessomos">
             <img src="img/bannerquienes.jpg" alt="Banner de bienvenida">
         </div>
@@ -76,6 +83,11 @@
         </div>
 
         <!-- Misión, Visión, Valores: una sección habitual en los about me de las empresas, queda vistoso-->
+        <!--Tal y como nos indicó Raúl, hemos buscado sitios web de empresas similares a las de nuestra
+         temática elegida, para inspirarnos en su diseño.
+         En esta sección, se ha imitado dentro de lo posible el aspecto de esta sección en el sitio web
+         https://www.symelec.com, ya que su diseño encajaba bastante con las directrices que hemos
+         acordado para nuestro proyecto -->
         <div class="mvv">
 
             <div class="recuadrmvv">
@@ -101,6 +113,8 @@
 
             <div class="recuadrmvv">
                 <h2>Valores</h2>
+                <!--Una vez más, se han usado ejemplos de Raúl (lista desordenada con iconos de la librería
+                 ion-icons, para darle un aspecto atractivo a este recuadro de contenido)-->
                 <ul>
                     <li>
                         <ion-icon name="checkmark-circle-outline"></ion-icon> <strong>Sostenibilidad</strong>
@@ -121,16 +135,21 @@
 
         <!-- Flipcards de pilares del servicio -->
         <!-- Aquí he imitado el estilo de otra web similar, porque me pareció algo muy dinámico-->
+        <!--El funcionamiento de los flipcards está creado en parte imitando lo mostrado por Raúl en sus tutoriales
+         en Youtube, y en parte buscando otros ejemplos en Internet para crear el código completo en el css. -->
         <div class="flipcards">
 
             <!-- Flipcard 1 -->
+            <!-- El contenedor flipcard lleva en su interior un div para el reverso, otro para el anverso, y
+                ambos están contenidor por otro más donde se aplica la posición en la que tienen que quedar
+                y el tipo de transformación de un lado al otro. -->
             <div class="flipcard">
-                <div class="flip-inner">
-                    <div class="flip-front">
+                <div class="flipespaciogiro">
+                    <div class="flipanverso">
                         <ion-icon name="shield-checkmark-outline" class="icono-flip"></ion-icon>
                         <p>Calidad de materiales</p>
                     </div>
-                    <div class="flip-back">
+                    <div class="flipreverso">
                         <p>Trabajamos solo con <span>materiales certificados</span> de alta eficiencia y
                             durabilidad, garantizando <span>instalaciones seguras y de larga vida útil</span>.</p>
                     </div>
@@ -138,12 +157,12 @@
             </div>
             <!-- Flipcard 2 -->
             <div class="flipcard">
-                <div class="flip-inner">
-                    <div class="flip-front">
+                <div class="flipespaciogiro">
+                    <div class="flipanverso">
                         <ion-icon name="time-outline" class="icono-flip"></ion-icon>
                         <p>Plazos garantizados</p>
                     </div>
-                    <div class="flip-back">
+                    <div class="flipreverso">
                         <p>Cumplimos rigurosamente los tiempos de ejecución acordados,
                             asegurando que cada proyecto se entregue <span>sin demoras ni imprevistos</span>.</p>
                     </div>
@@ -151,12 +170,12 @@
             </div>
             <!-- Flipcard 3 -->
             <div class="flipcard">
-                <div class="flip-inner">
-                    <div class="flip-front">
+                <div class="flipespaciogiro">
+                    <div class="flipanverso">
                         <ion-icon name="construct-outline" class="icono-flip"></ion-icon>
                         <p>Asesoría de instalación</p>
                     </div>
-                    <div class="flip-back">
+                    <div class="flipreverso">
                         <p>Ofrecemos un <span>acompañamiento completo</span> desde el inicio, ayudando a nuestros
                             clientes a elegir la solución energética que mejor se adapta a sus necesidades.</p>
                     </div>
@@ -164,12 +183,12 @@
             </div>
             <!-- Flipcard 4 -->
             <div class="flipcard">
-                <div class="flip-inner">
-                    <div class="flip-front">
+                <div class="flipespaciogiro">
+                    <div class="flipanverso">
                         <ion-icon name="cash-outline" class="icono-flip"></ion-icon>
                         <p>Gestión de subvenciones</p>
                     </div>
-                    <div class="flip-back">
+                    <div class="flipreverso">
                         <p><span>Nos encargamos de tramitar</span> las <span>ayudas y subvenciones</span> disponibles,
                             facilitando
                             el acceso a beneficios económicos para cada instalación.</p>
@@ -178,12 +197,12 @@
             </div>
             <!-- Flipcard 5 -->
             <div class="flipcard">
-                <div class="flip-inner">
-                    <div class="flip-front">
+                <div class="flipespaciogiro">
+                    <div class="flipanverso">
                         <ion-icon name="chatbubble-ellipses-outline" class="icono-flip"></ion-icon>
                         <p>Comunicación constante</p>
                     </div>
-                    <div class="flip-back">
+                    <div class="flipreverso">
                         <p>Mantenemos informado al cliente en todo momento, con <span>atención
                                 personalizada y canales abiertos</span> durante todo el proceso.</p>
                     </div>
@@ -212,6 +231,11 @@
         </div>
     </footer>
 
+    <!-- Para el script, se ha partido del ejemplo de Raúl, pero no funcionaba completamente.
+     Como no hemos llegado a ver javaScript durante el curso, en este caso he tenido que
+     pedirle a una IA que modificase el script para que funcionase bien, pero no tengo
+     conocimiento suficiente para saber por qué no respondía bien el ejemplo de Raúl desde
+     un principio, aunque seguí todos los pasos exactamente como los hizo él. -->
     <script>
         // Cuando se haga clic en el icono de la hamburguesa
         document.querySelector('.hamburguesa-icon').addEventListener('click', function () {
