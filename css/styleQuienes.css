@@ -1,3 +1,6 @@
+/*Inicialización, la parte inicial de este código
+se ha tomado de la base de index, que está creada de acuerdo
+a los ejemplos de Raúl en clase y de sus apuntes*/
 * {
   margin: 0px;
   padding: 0px;
@@ -82,7 +85,13 @@ header {
   background-color: black;
 }
 
-
+/*Esta parte sirve para que al pasar el cursor
+sobre un elemento del menú de navegación este 
+haga un efecto de ligero aumento de tamaño,
+con la condición de que el elemento NO
+corresponda a la sección en la que se encuentra
+el usuario navegando, que hemos marcado con la
+clase seccionactiva en cada documento html*/
 .menuGeneral li a:not(.seccionactiva):hover {
   transform: scale(1.1);
 }
@@ -272,8 +281,8 @@ texto centrado*/
 }
 
 /*Iconos de la librería para los valores,
-con flex-shrink para que no encojan al extrechar
-el navegador*/
+con flex-shrink a cero para que no encojan al extrechar
+el navegador, sino dejan de verse*/
 .recuadrmvv ul li ion-icon {
   font-size: 1.5rem;
   color: green;
@@ -285,8 +294,8 @@ el navegador*/
 /* SECCIÓN DE PILARES DEL SERVICIO CON FLIPCARDS */
 
 /*Formato del contenedor de todas, las centra y 
-las alinea, cuando el navegador se estrecha deben 
-quedar apiladas en vertical.*/
+las alinea, cuando el navegador se estrecha 
+quedan apiladas en vertical (ver seccion responsive).*/
 .flipcards {
   display: flex;
   flex-wrap: wrap;
@@ -316,27 +325,27 @@ para que quede estético*/
   margin-bottom: 1rem;
 }
 
-/*Reverso de cada una, gira*/
-.flip-inner {
+/*Contenedor para la transformación de las flipcards*/
+.flipespaciogiro {
   position: relative;
   width: 100%;
   transition: transform 0.6s;
   /*con esto hace que haya anverso y reverso
-  correctamente, sino muestra solo el anverso dado
-  la vuelta*/
+  correctamente, sino se muestra solo el anverso dado
+  la vuelta al poner el cursor*/
   transform-style: preserve-3d;
   min-height: 240px;
 }
 
 /*Activacion de la rotación al pasar el cursor*/
-.flipcard:hover .flip-inner {
+.flipcard:hover .flipespaciogiro {
   transform: rotateY(180deg);
 }
 
 /*Formato para que el anverso y el reverso
-tengan el mismo aspecto, anchura y comportamiento*/
-.flip-front,
-.flip-back {
+tengan el mismo aspecto, anchura*/
+.flipanverso,
+.flipreverso {
   position: absolute;
   width: 100%;
   min-height: 100%;
@@ -351,7 +360,7 @@ tengan el mismo aspecto, anchura y comportamiento*/
 
 /*Formato solo para el anveros, para
 centrar el texto y el contenido en vertical y horizontal*/
-.flip-front {
+.flipanverso {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -362,7 +371,7 @@ centrar el texto y el contenido en vertical y horizontal*/
 }
 
 /*Formato para el tamaño de los iconos*/
-.flip-front ion-icon {
+.flipanverso ion-icon {
   width: 50px;
   height: 50px;
   margin-bottom: 1rem;
@@ -371,7 +380,7 @@ centrar el texto y el contenido en vertical y horizontal*/
 /*Formato para el reverso, para centrar el texto
 y que se vea bien, como si fuera negrita y
 justificado*/
-.flip-back {
+.flipreverso {
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -387,12 +396,12 @@ justificado*/
 
 /*Formato para resaltar algunas palabras de los textos del
 reverso de las flipcards*/
-.flip-back span {
+.flipreverso span {
   font-weight: bold;
   color: #2f6b3a;
 }
 
-/* SECCIÓN DE FOOTER - MODIFICADO A PARTIR DEL BASE*/
+/* SECCIÓN DE FOOTER - MODIFICADO A PARTIR DEL BASE de index.html*/
 .footerFinal {
   background-color: black !important;
   color: #fff;
@@ -423,6 +432,7 @@ reverso de las flipcards*/
   margin: 0.5em;
 }
 
+/*Para que queden subrayados al pasar el cursor*/
 .footer-links a:hover {
   text-decoration: underline;
 }
@@ -438,10 +448,14 @@ las posibles redes sociales de la empresa*/
   margin-bottom: 1rem;
 }
 
+/*Color de los iconos*/
 .footer-redes ion-icon {
   background-color: black;
 }
 
+/*Con el transition, la transformación de los
+iconos es suave y cambian al color de la siguiente condición, en 
+ .footer-redes a:hover*/
 .footer-redes a {
   color: #2f6b3a;
   font-size: 2rem;
@@ -457,19 +471,21 @@ las posibles redes sociales de la empresa*/
 /*SECCIÓN RESPONSIVE*/
 /*TAMAÑOS según el enunciado de la actividad:*/
 
+/*Apenas hemos podido ver el apartado de responsive en las clases,
+de modo que en esta sección, lo que se ha hecho es usar las herramientas de desarrollo
+de los navegadores, como Chrome y Firefox, y, con ayuda de los ejemplos de Raúl, 
+los apuntes, y prueba y error, se han ido modificando los elementos que se veían mal,
+quedaban solapados o se comportaban de forma extraña, para que se visualicen en cada
+uno de los tamaños que se pedían.*/
+
 /* ------------------------------------------------------------------  */
 /* RESOLUCIONES DE MÁS DE 1300PX DE ANCHO*/
 /* ------------------------------------------------------------------  */
 @media screen and (max-width: 1300px) {
-  .mission-vision-values {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  .menuGeneral li {
+    font-size: 22px;
   }
 
-  .mission-vision-values div {
-    flex: 1;
-  }
 }
 
 /* ------------------------------------------------------------------  */
@@ -477,8 +493,18 @@ las posibles redes sociales de la empresa*/
 /* ------------------------------------------------------------------  */
 @media screen and (max-width: 1299px) and (min-width: 1200px) {
   .menuGeneral li {
-    font-size: 22px;
+    font-size: 20px;
   }
+}
+
+.mvv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mvv div {
+  flex: 1;
 }
 
 
@@ -491,7 +517,7 @@ las posibles redes sociales de la empresa*/
   }
 
   .menuGeneral li {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .menuGeneral>li.logo img {
@@ -502,13 +528,13 @@ las posibles redes sociales de la empresa*/
     display: block;
   }
 
-  .mission-vision-values {
+  .mvv {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  .mission-vision-values div {
+  .mvv div {
     flex: 1;
   }
 }
@@ -548,6 +574,9 @@ las posibles redes sociales de la empresa*/
 
   /* ICONO DE HAMBURGUESA */
   .menuGeneral>li.icon {
+    /*order para que el icono de hamburguesa 
+   se ponga arriba de los elementos del menú
+   si no se veía abajo*/
     order: 1;
     display: flex !important;
     justify-content: center;
@@ -606,6 +635,8 @@ las posibles redes sociales de la empresa*/
     flex: 1;
   }
 
+  /*Para poner los flipcards
+  en columna en pantallas estrechas*/
   .flipcards {
     flex-direction: column;
     align-items: center;
